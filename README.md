@@ -48,3 +48,5 @@ Nokogiri::HTML(open(url))가 반환하는 타입은 문자열이 아니라 Nokog
 
 ![1](https://user-images.githubusercontent.com/31656287/38167616-08166fb2-3573-11e8-9f40-e13976f20477.png)
 
+끝
+
