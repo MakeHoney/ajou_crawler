@@ -16,19 +16,27 @@ class SchoolFood
 
 	def fixUrl(html)
 		html.gsub!('no_right left_pd', 'no_right_left_pd')
-		html.gsub!(/<[가-힣]/) {|s| s = '&lt;' + s[1]}
+		html.gsub!(/<[가-힣]/) {|s| s = '※&lt;' + s[1]}
 		html.gsub!(/[가-힣]>/) {|s| s = s[0] + '&gt;'}
 	end
 	
 	def studentFoodCourt
 		@page.css('table.ajou_table')[0].css('td.no_right_left_pd li').each do |li|
-		puts li.text
+			puts li.text
 		end	
 	end
 
-	def schoolFood
-		@page.css('table.ajou_table td.no_right_left_pd li').each do |td|
-			puts td.text
+	def dormFoodCourt
+		time = ['아침', '점심', '저녁']
+
+		3.times do |i|
+			puts "******** #{time[i]} ********\n"
+			@page.css('table.ajou_table')[1].
+			css('td.no_right_left_pd')[i].		# 아침 점심 저녁 선택자
+			css('li').each do |li|
+				puts li.text
+			end	
+			puts "\n\n"
 		end
 	end
 
@@ -42,4 +50,4 @@ end
 
 test = SchoolFood.new()
 
-test.arrangeList
+test.dormFoodCourt
