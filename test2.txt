@@ -1,430 +1,0 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
-<head>
-
-<title>교내식당 | 아주대학교(OLD)</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv="keywords" content="" />
-<meta http-equiv="description" content="" />
-<link rel="stylesheet" type="text/css" href="/_common/cms.css" />
-<link rel="stylesheet" type="text/css" href="/_resources/kr/_css/layout.css" />
-<!--[if IE 6]>
-	<link rel="stylesheet" type="text/css" href="/_common/ie6.css" />
-<![endif]-->
-<!--[if IE 7]>
-	<link rel="stylesheet" type="text/css" href="/_common/ie7.css" />
-<![endif]-->
-<!--[if IE 8]>
-	<link rel="stylesheet" type="text/css" href="/_common/ie8.css" />
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="/_resources/kr/_css/user.css" />
-
-<script type="text/javascript" src="/_common/jquery-1.7.1.min.js"></script>
-<!--[if IE 6]>
-<script type="text/javascript" src="/_common/js/jquery.pngFix.js"></script>
-<script type="text/javascript" src="/_common/js/ie6.jwxe.li.fix.js"></script>
-<script type="text/javascript">
-	DD_belatedPNG.fix('img');
-</script>
-<![endif]-->
-<script type="text/javascript">
-//<![CDATA[
-	var _thisHost = "http://www.ajou.ac.kr";
-	var _thisUrl = document.location.href;
-	var _so_ = false;
-	var _cur_menu_cd = '293';
-	var _edit_content = false 
-	var front_page_edit = true;
-	var zooInOutMode = 'font';
-	var _reouscePath = '/_resources/kr/';
-
-//]]>
-</script>
-<script type="text/javascript" src="/_common/cms.js"></script>
-<link rel="stylesheet" type="text/css" href="/_resources/kr/_css/table.css" />
-<script type="text/javascript" src="/_resources/kr/_js/lnb_life.js"></script>
-<script type="text/javascript" src="/_resources/kr/_js/life_food_tab_01.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/_resources/kr/_css/all_site.css" />
-<script type="text/javascript" src="/_resources/kr/_js/user/all_site.js"></script>
-<link rel="shortcut icon" href="/_resources/pavicon_ajou.png"><script type="text/javascript" src="/_resources/kr/_js/user.js"></script>
-</head>
-<body id="item_body">
-
-<ul id="go_main">
-	<li><a href="#jwxe_main_content" >본문 바로가기</a></li>  <li><a href="#jwxe_main_menu" >주메뉴 바로가기</a></li>
-	<li><a href="#jwxe_sub_menu" >서브메뉴 바로가기</a></li>
-</ul>
-
-
-
-<div class="top_wrap">
-	<div class="bg_1024">
-		<div class="lo_1024_center">
-			<div class="lo_1010"></div>
-			<div class="lo_1010">
-				<div class="lo_242_left">
-<div class="jwxe_root" ><h2 class="jwxe_h jw-relative" style="height:30px; width:209px; margin:0px 0px 14px; padding:80px 0px 0px; " ><img class="jwxe_img jw-relative" src="/_resources/kr/img/lnb/life/lnb_life_tit.gif" alt="대학생활"/></h2>
-		<ul class="jwxe_menu_box1 jw-relative lnb_foot" style="width:221px;"><li><a class="jwxe_a jw-relative lnb_a lnb_a02" id="jwxe_6834316" href="/kr/life/schedule_haksa.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_off.gif" alt="학사"/></a>
-			<ul class="jwxe_menu_box1 jw-relative jw-dsp-none lnb_foot_ul" style="width:204px;"><li><a class="jwxe_a jw-relative" id="jwxe_8653057" href="/kr/life/schedule_haksa.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_02_off.gif" alt="학사일정"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_8653251" href="/kr/life/edu01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_03_off.gif" alt="교육과정"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_8653841" href="/kr/life/class01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_04_off.gif" alt="수업"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_8653557" href="/kr/life/hak01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_05_off.gif" alt="학적"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3336262" href="/kr/life/ur01.jsp" ><img src="/_resources/kr/img/lnb/life/life_new_01_off.gif" alt="학부생 연구(UR)"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3337684" href="/kr/life/saveprogram01.jsp" ><img src="/_resources/kr/img/lnb/life/life_new_02_off.gif" alt="비교과 프로그램"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3378284" href="/kr/life/bamedia_01.jsp" ><img src="/_resources/kr/img/lnb/life/life_new_03_off.gif" alt="학사자료실 "/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_6926987" href="/kr/life/haksa_qna.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_10_off.gif" alt="학사Q&amp;amp;A"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_5290383" href="/kr/life/paper01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_06_off.gif" alt="증명서"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_5291327" href="/kr/life/army01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_07_off.gif" alt="병무안내"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_5301172" href="/kr/life/handbook2017.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_01_08_off.gif" alt="요람"/></a></li><li class="jwxe_li jw-relative lnb_bg02" style="height:25px; width:203px; " ></li>
-			</ul></li><li><a class="jwxe_a jw-relative lnb_a lnb_a02" id="jwxe_1938323" href="/kr/life/ajouclass_comment.jsp" ><img src="/_resources/kr/img/lnb/life/haksa_ajouclass_off.gif" alt="아주 새로운 강의"/></a></li><li><a class="jwxe_a jw-relative lnb_a lnb_a02" id="jwxe_6834482" href="/kr/life/select.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_03_off.gif" alt="장학정보"/></a>
-			<ul class="jwxe_menu_box1 jw-relative jw-dsp-none lnb_foot_ul" style="width:204px;"><li><a class="jwxe_a jw-relative" id="jwxe_6950098" style="margin:12px 0 0 0;" href="/kr/life/select.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_03_02_off.gif" alt="장학생선발"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_6949882" href="/kr/life/oncampus_2017.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_03_03_off.gif" alt="교내장학"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_6949753" href="/kr/life/offcampus04.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_03_04_off.gif" alt="교외장학"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_6399527" href="/kr/life/finance01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_03_005_off.gif" alt="학자금융자"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_9361193" href="/kr/ajou/sos_request.jsp" ><img src="/_resources/kr/img/lnb/intro/lnb_sos_off.gif" alt="아주희망SOS"/></a></li><li class="jwxe_li jw-relative lnb_bg02" style="height:25px; width:203px; " ></li>
-			</ul></li><li><a class="jwxe_a jw-relative lnb_a lnb_a02 jw_selected" id="jwxe_6835023" href="/kr/life/convenience01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_04_on.gif" alt="복지편의"/></a>
-			<ul class="jwxe_menu_box1 jw-relative lnb_foot_ul" style="width:204px;"><li><a class="jwxe_a jw-relative" id="jwxe_7020958" style="margin:12px 0 0 0;" href="/kr/life/convenience01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_04_01_off.gif" alt="학생지원"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7021365" href="/kr/life/bus01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_04_02_off.gif" alt="학교버스"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_8365257" href="/kr/life/townbus.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_townbus_off.gif" alt="마을버스"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7021035" href="/kr/life/life.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_04_03_off.gif" alt="생활관"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7200838" href="/kr/life/house01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_04_05_off.gif" alt="고시반"/></a></li><li><a class="jwxe_a jw-relative jw_selected" id="jwxe_7021521" href="/kr/life/food.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_04_04_on.gif" alt="시설"/></a></li><li class="jwxe_li jw-relative lnb_bg02" style="height:25px; width:203px; " ></li>
-			</ul></li><li><a class="jwxe_a jw-relative lnb_a lnb_a02" id="jwxe_5973499" href="/kr/life/mobile01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_05_off.gif" alt="Ajou Mobile Campus"/></a>
-			<ul class="jwxe_menu_box1 jw-relative jw-dsp-none lnb_foot_ul" style="width:204px;"><li><a class="jwxe_a jw-relative" id="jwxe_7076892" style="margin:12px 0 0 0;" href="/kr/life/mobile01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_05_01_off.gif" alt="모바일캠퍼스안내"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_0311045" href="/kr/life/mobile01_01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_05_01-1_off.gif" alt="모바일앱이용안내"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7077256" href="/kr/life/mobile02.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_05_02_off.gif" alt="N-Zone서비스"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7076412" href="/kr/life/mobile03.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_05_03_off.gif" alt="무선인터넷서비스 "/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7076899" href="/kr/life/mobile06.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_05_05_off.gif" alt="웹프린팅서비스 "/></a></li><li class="jwxe_li jw-relative lnb_bg02" style="height:25px; width:203px; " ></li>
-			</ul></li><li><a class="jwxe_a jw-relative lnb_a lnb_a02" id="jwxe_5975000" href="/kr/life/life01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_06_off.gif" alt="학생문화"/></a>
-			<ul class="jwxe_menu_box1 jw-relative jw-dsp-none lnb_foot_ul" style="width:204px;"><li><a class="jwxe_a jw-relative" id="jwxe_7135951" style="margin:12px 0 0 0;" href="/kr/life/life01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_06_01_off.gif" alt="학생자치기구 "/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7136062" href="/kr/life/life02.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_06_02_off.gif" alt="학보사 "/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7136655" href="/kr/life/life03.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_06_03_off.gif" alt="교육방송국 "/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_7136348" href="/kr/life/life04.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_06_04_off.gif" alt="영자신문사"/></a></li><li class="jwxe_li jw-relative lnb_bg02" style="height:25px; width:203px; " ></li>
-			</ul></li><li><a class="jwxe_a jw-relative lnb_a lnb_a02" id="jwxe_2881071" href="/kr/life/help01.jsp" ><img src="/_resources/kr/img/lnb/life/lnb_life_07_off.gif" alt="헬프데스크"/></a></li>
-		</ul>
-</div></div>
-				<div class="lo_736_left">
-					<div class="lo_736">
-<div class="jwxe_root" style="height:150px; " >
-		<div class="jwxe_navigator jw-relative jw-fl-right navi" style="top:50px;height:15px;margin:0 10px 0 0 ;padding:0 0 0 10px;"><ul><li><img src="/_resources/kr/img/common/navi_img_gt.gif" alt=""/>대학생활</li><li><img src="/_resources/kr/img/common/navi_img_gt.gif" alt=""/>복지편의</li><li><img src="/_resources/kr/img/common/navi_img_gt.gif" alt=""/>시설</li><li class="navi_color"><img src="/_resources/kr/img/common/navi_img_gt.gif" alt=""/>교내식당</li></ul>
-		</div>
-		<div class="jwxe_title_img" style="left:30px; top:80px; " >
-			<h2><img alt="시설" src="/_resources/kr/img/title/title_134.gif"/></h2>
-
-		</div>
-</div></div>
-					<div class="lo_736">
-<div class="jwxe_root contents" style="height:97px; " >
-		<ul class="jwxe_ul jw-relative" style="height:67px; width:700px; "><li><a class="jwxe_a jw-relative jw_selected" id="jwxe_2505151" href="/kr/life/food.jsp" ><img src="/_resources/kr/img/life/life_sisul_tab_01_on.gif" alt="교내식당"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_2536572" href="/kr/life/language.jsp" ><img src="/_resources/kr/img/life/life_sisul_tab_02_off.gif" alt="어학교육원"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_2538398" href="/kr/life/sports.jsp" ><img src="/_resources/kr/img/life/life_sisul_tab_03_off.gif" alt="체육관"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_2540255" href="/kr/life/squash.jsp" ><img src="/_resources/kr/img/life/life_sisul_tab_04_off.gif" alt="스쿼시장"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_2542013" href="/kr/life/consumption.jsp" ><img src="/_resources/kr/img/life/life_sisul_tab_05_off.gif" alt="소비조합"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_2556792" href="/kr/life/bank.jsp" ><img src="/_resources/kr/img/life/life_bank_tap_off.gif" alt="은행/우체국"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_2564469" href="/kr/life/fitness.jsp" ><img src="/_resources/kr/img/life/life_tap_fitness_off.gif" alt="헬스장"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_4099245" style="left:-1px;" href="/kr/life/gita.jsp" ><img src="/_resources/kr/img/life/life_sisul_tab_08_off.gif" alt="기타편의시설"/></a></li>
-		</ul>
-</div></div>
-					<div class="lo_736" id="jwxe_main_content">
-<!-- begin script -->
-
-
-<link rel="stylesheet" type="text/css" href="/_common/css/ui.datepicker.css" />
-<script type="text/javascript" src="/_common/js/ui.datepicker.all.js"></script>
-<script type="text/javascript">
-initCalendar('sel_date');
-$(function() {  
-  $('#sel_date').change(function() {
-    document.location.href = '?date='+this.value;
-  });
-});    
-</script>
-<!-- end script -->
-<div class="jwxe_root contents" >
-		<div class="jwxe_div jw-relative" style="width:698px; " >
-			<div class="jwxe_div jw-relative jw-txt-center" style="height:110px; " >
-				<div class="jwxe_div jw-relative rest_title" style="height:43px; " ><span class="jwxe_span" style="left:26px; top:15px; " >아주대학교는 학생 및 교직원들의 식사를 위해 4개의 식당을 운영하고 있습니다.</span><input type="text" id="sel_date" class="jwxe_input_text cal_ico" style="left:583px; top:10px; height:15px; width:93px; "  value="2018-03-30"  title="" name="jwxe_0651382"  readonly="readonly"  maxlength="10" />
-				</div>
-				<div class="jwxe_div jw-relative rest-date" style="margin:18px 0px 0px; " ><!-- begin script -->
-<div class="month">
-          <a href="?date=2018-03-29" ><img src="/_custom/ajou/_common/board/common/img/month_prev.gif" alt="이전일로 이동"/></a>
-  <span style="display:inline-block;padding:5px 10px 0 10px;font-weight:bolder;font-size:34px;">2018.03.30</span>
-			<a href="?date=2018-03-31" ><img src="/_custom/ajou/_common/board/common/img/month_next.gif" alt="다음일로 이동"/></a>
-		</div>
-<!-- end script -->
-
-				</div>
-			</div>
-				
-
-
-
-<table cellpadding="0" cellspacing="0" class="ajou_table" style="min-height:240px" summary="교내식당 학생식당의 식단에 관한 내용를 보여주는 표">
-	<caption>
-		교내식당 학생식당의 식단</caption>
-	<colgroup>
-		<col width="30%" />
-		<col width="10%" />
-		<col />
-		<col width="21%" />
-	</colgroup>
-	<thead>
-		<tr>
-			<th class="no_right yesback04" colspan="3" scope="col">
-				학생식당
-			</th>
-			<td class="no_right yesback04" style="text-align:right;">
-			
-			
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-
-
-		<tr>
-			<td rowspan="4">
-				<img alt="학생식당의 전경" src="/_resources/kr/img/life/img_food_02.gif" /></td>
-		
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				점심</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li><가마A-4,000원>    </li><li>순살햄김치찌개*라면사리/쌀밥/제육강정/숙주나물/깍두기         </li><li><모던보울-4,000원>      </li><li>멕시칸돈까스/쌀밥/감자튀김/맑은우동국물/단무지      </li><li><인터쉐프A-4,000원>      </li><li>언양식떡갈비철판볶음밥/맑은우동국물/단무지      </li><li><인터쉐프B-4,000원>      </li><li>제육후라이덮밥/김말이떡강정/맑은우동국물/단무지      </li><li><델리버스A-4,000원>      </li><li>나가사끼짬뽕/탕수육/단무지      </li><li><델리버스-3,300원>      </li><li>닭강정/맑은우동국물/단무지      </li><li><가마C>      </li><li>즉석라면 1,700원      </li><li>만두라면/떡라면/치즈라면 2,000원      </li><li>떡만두라면/치즈떡라면/치즈만두라면 2,300원      </li><li>공기밥 별도 1,000원      </li><li>*운영시간 09:00 ~ 17:00 (주문가능시간 ~16:40)      </li><li>*라면은 10:00~16:00까지 운영하지 않습니다.      </li>
-				</ul>
-			</td>
-		</tr>
-		
-		
-		
-		
-		
-			
-	</tbody>
-	</table>
-	
-
-
-
-				
-
-
-
-<table cellpadding="0" cellspacing="0" class="ajou_table" style="min-height:240px" summary="교내식당 기숙사식당의 식단에 관한 내용를 보여주는 표">
-	<caption>
-		교내식당 기숙사식당의 식단</caption>
-	<colgroup>
-		<col width="30%" />
-		<col width="10%" />
-		<col />
-		<col width="21%" />
-	</colgroup>
-	<thead>
-		<tr>
-			<th class="no_right yesback04" colspan="3" scope="col">
-				기숙사식당
-			</th>
-			<td class="no_right yesback04" style="text-align:right;">
-			
-			
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-
-
-		<tr>
-			<td rowspan="4">
-				<img alt="기숙사식당의 전경" src="/_resources/kr/img/life/img_food_03.gif" /></td>
-		
-			<td>아침</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li><조식/백반 - 3,000원></li><li>쌀밥(일반미:국내산)</li><li>북어감자국</li><li>배추김치(배추, 고춧가루-중국산)</li><li>미트볼케찹조림(돈계육:국내산)</li><li>도시락김</li><li>플리또</li><li><조식/빵 - 3,000원></li><li>토스트&딸기쨈and버터, 후랑크소시지, 달걀후라이, 시리얼, 우유 </li><li>※계란후라이 (500원) 별도 판매</li><li>  (토스트는 계란후라이 포함입니다)</li><li>※ 운영시간 : 08:10~10:00</li>
-				</ul>
-			</td>
-		
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				점심</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li><중식/한식 -3,800원></li><li>쌀밥(일반미:국내산)</li><li>춘천닭갈비</li><li>어묵국</li><li>메추리곤약조림</li><li>들깨호박볶음</li><li>배추김치(배추,고춧가루:중국산)</li><li><중*석식/양식 - 4,000원> </li><li>쌀밥</li><li>알떡함박스테이크</li><li>어묵국</li><li>메가크런치</li><li>마카로니샐러드</li><li>오이피클</li><li><중*석식/퓨전 - 3,300원> </li><li>참치김치덮밥</li><li>어묵국</li><li>단무지</li><li>※ 운영시간 : 11:00~15:30 (한식,양식)</li><li>                11:00~15:00 (라면)</li><li>                11:00~14:00 (일품) </li><li><버거감 Burger Gamㅡ 메뉴> </li><li>Time 10:00 ~ 18:50 </li><li>Break Time 15:00 ~ 16:00 </li><li>-Classic Burger- </li><li>Bulgogi / Chicken / Shrimp 2</li><li>- 1Choice : 2,500원 </li><li>- Set Menu : 4,500원 </li><li>-Premium Burger- </li><li>HAPI , MAMI, PAPA, Double PAPA </li><li>- 1Choice : 3,500원 </li><li>-Set Menu : 5,500원</li>
-				</ul>
-			</td>
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				저녁</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li><중*석식/양식 - 4,000원> </li><li>쌀밥</li><li>알떡함박스테이크</li><li>어묵국</li><li>메가크런치</li><li>마카로니샐러드</li><li>오이피클</li><li><중*석식/퓨전 - 3,300원> </li><li>참치김치덮밥</li><li>어묵국</li><li>단무지</li><li><석식/한식 -3,800원></li><li>쌀밥</li><li>비빔밥&계란후라이</li><li>어묵국</li><li>떡갈비&소스</li><li>배추김치(배추,고춧가루:중국산)</li><li>※ 운영시간 : 17:00~19:00(한식,양식)(식권마감시간:18:45)</li>
-				</ul>
-			</td>
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				분식</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li><분식 - 라면 2,800원> </li><li>떡, 치즈, 만두라면<택1> </li><li>쌀밥(일반미:국내산) </li><li>배추김치(배추, 고춧가루-중국산)or 깍두기</li>
-				</ul>
-			</td>
-		</tr>
-		
-			
-	</tbody>
-	</table>
-	
-
-
-
-				
-
-
-
-<table cellpadding="0" cellspacing="0" class="ajou_table" style="min-height:240px" summary="교내식당 교직원 식당(생활관2층)의 식단에 관한 내용를 보여주는 표">
-	<caption>
-		교내식당 교직원 식당(생활관2층)의 식단</caption>
-	<colgroup>
-		<col width="30%" />
-		<col width="10%" />
-		<col />
-		<col width="21%" />
-	</colgroup>
-	<thead>
-		<tr>
-			<th class="no_right yesback04" colspan="3" scope="col">
-				교직원 식당(생활관2층)
-			</th>
-			<td class="no_right yesback04" style="text-align:right;">
-			
-			<a href="http://www.ajou.ac.kr/kr/life/menu.jsp
-" target="_blank"><img src="/_custom/ajou/_common/board/common/img/btn_order.gif" alt="주문식단(새창)"/></a>
-			
-			
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-
-
-		<tr>
-			<td rowspan="4">
-				<img alt="교직원 식당(생활관2층)의 전경" src="/_resources/kr/img/life/food_photo05.gif" /></td>
-		
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				점심</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li>쌀밥</li><li>장터국밥</li><li>데리야끼제육볶음</li><li>비엔나소세지볶음</li><li>근대나물</li><li>깍두기</li><li>샐러드/드레싱</li><li>수정과</li>
-				</ul>
-			</td>
-		</tr>
-		
-		
-		
-		<tr>
-			<td>
-				저녁</td>
-			<td class="no_right left_pd" colspan="2">
-				<ul class="tri_list02">
-				<li>*후리가케볶음밥*</li><li>꼬치어묵탕</li><li>춘천닭갈비</li><li>쫄면야채무침</li><li>얼갈이된장무침</li><li>배추김치</li><li>샐러드/드레싱</li><li>수정과</li>
-				</ul>
-			</td>
-		</tr>
-		
-		
-		
-			
-	</tbody>
-	</table>
-	
-
-
-
-				
-
-
-
-<table cellpadding="0" cellspacing="0" class="ajou_table" style="min-height:240px" summary="교내식당 교직원 식당 (종합관 12층)의 식단에 관한 내용를 보여주는 표">
-	<caption>
-		교내식당 교직원 식당 (종합관 12층)의 식단</caption>
-	<colgroup>
-		<col width="30%" />
-		<col width="10%" />
-		<col />
-		<col width="21%" />
-	</colgroup>
-	<thead>
-		<tr>
-			<th class="no_right yesback04" colspan="3" scope="col">
-				교직원 식당 (종합관 12층)
-			</th>
-			<td class="no_right yesback04" style="text-align:right;">
-			
-			
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-
-	
-		<tr>
-			<td><img alt="교직원 식당 (종합관 12층)의 전경" src="/_resources/kr/img/life/img_food_05.gif" /></td>
-			<td colspan="3" class="align-c no_right">등록된 식단이 없습니다.</td>
-		</tr>
-
-			
-	</tbody>
-	</table>
-	
-
-
-
-		</div>
-</div></div>
-				</div>
-				<div class="lo_32_left">
-<div class="jwxe_root" style="height:137px; padding:138px 0px 0px; " >
-		<div class="jwxe_quick_menu jw-relative" style="height:124px; width:31px; background:url(/_resources/kr/img/quick/quick_bg.jpg) transparent no-repeat ; " >
-			<h2 class="jw_skip">빠른 이동 메뉴</h2><img class="jwxe_img" style="left:5px; top:29px; " src="/_resources/kr/img/quick/quick_tit.gif" alt="글자"/><a class="jwxe_a_zoom_in" id="jwxe_zoomIn" style="left:5px;top:46px;" href="#zoom-in" ><img src="/_resources/kr/img/quick/quick_zoomin.gif" alt="화면확대"/></a><a class="jwxe_a_zoom_out" id="jwxe_zoomOut" style="left:5px;top:63px;" href="#zoom-out" ><img src="/_resources/kr/img/quick/quice_zoomout.gif" alt="화면축소"/></a><a class="jwxe_a" id="jwxe_9163995" style="top:94px;" href="#top" ><img src="/_resources/kr/img/quick/quick_top_btn.gif" alt="top"/></a>
-		</div>
-</div></div>
-			</div>
-		</div>
-	</div>
-	<div class="foot_wrap">
-		<div class="lo_1024_center">
-			<div class="lo_1010">
-<div class="jwxe_root" style="width:1024px; height:128px; background:url(/_resources/kr/img/footer/foot_bg.gif) transparent repeat-x ; " >
-		<div class="jwxe_div jw-relative jw-fl-right damdang" style=" min-width:20px; margin:10px 80px 0px 0px; " >
-				  
-<dl><dt>담당자 : </dt><dd>총무팀 안영식 <span>|</span> </dd><dt>E-mail : </dt><dd><a href="mailto:ysahn@ajou.ac.kr">ysahn@ajou.ac.kr</a> <span>|</span> </dd><dt class="jw_skip">Tel</dt><dd>031-219-2074</dd></dl>
-
-
-
-		</div><img class="jwxe_img" style="top:62px; " src="/_resources/kr/img/footer/foot_logo.gif" alt="아주대학교"/>
-		<ul class="jwxe_ul" style="left:228px; top:56px; height:11px; width:602px; "><li><a class="jwxe_a jw-relative" id="jwxe_3169639" href="/kr/guide/policy.jsp" ><img src="/_resources/kr/img/footer/foot_m01.gif" alt="개인정보처리방침"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3171670" title="새창 열기" target="_blank" href="http://www.academyinfo.kr/UIPISA/uipnh/unt/ipsrch/UntUnvAcdtSrchPupInr.do?schlId=0000146&amp;svyYr=2012&amp;schlDivCd=02" ><img src="/_resources/kr/img/footer/foot_m02.gif" alt="대학정보공시"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3192538" href="/kr/intro/budget.jsp" ><img src="/_resources/kr/img/footer/foot_m03.gif" alt="예/결산공고"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3193985" href="/kr/intro/evaluation.jsp" ><img src="/_resources/kr/img/footer/foot_m04.gif" alt="대학자체평가"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3196401" href="/kr/guide/guide06.jsp" ><img src="/_resources/kr/img/footer/foot_m05.gif" alt="구매입찰"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3198850" style="left:2px;" href="/kr/guide/guide07.jsp" ><img src="/_resources/kr/img/footer/footer_m06.gif" alt="교직원채용"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3199717" style="left:2px;" href="/kr/guide/sitemap.jsp" ><img src="/_resources/kr/img/footer/foot_m07.gif" alt="사이트맵"/></a></li><li><a class="jwxe_a jw-relative" id="jwxe_3348717" style="left:2px;" href="/kr/guide/use01.jsp" ><img src="/_resources/kr/img/footer/foot_m08.gif" alt="홈페이지이용안내"/></a></li>
-		</ul>
-		<ul class="jwxe_ul" style="left:227px; top:76px; height:30px; width:387px; "><li><img class="jwxe_img jw-relative" src="/_resources/kr/img/footer/footer_kr02_16499.gif" alt="우)16499 경기도 수원시 영통구 월드컵로 206 아주대학교 대표전화 031-219-2114"/></li><li><img class="jwxe_img jw-relative" style="margin:5px 0px 0px; " src="/_resources/kr/img/common/foot_copy_kr.gif" alt="Copyright (c)ajou University. All Right Reserved. WebMaster"/></li><!-- begin script -->
-
-
-<li><a class="jwxe_a jw-relative" href="mailto:" ><img style="margin:4px 0 0 5px;" src="/_resources/kr/img/common/foot_webmaster.gif" alt="담당자에게 메일 보내기[새창열림]"/></a></li>
-
-<!-- end script -->
-
-		</ul>
-		<div class="jwxe_html" style="left:675px;top:80px;"><form method="post" action="/_common/jsp/redirect.jsp" target="_blank">	<label for="uni" style="position: absolute; left: -999em;">대학/대학원</label>	 <select id="uni" name="link" style="border: 1px solid #D2D2D2; font-size: 12px; width:125px; height:22px; margin-right:-2px;">          <option selected="selected" value="">대학/대학원 선택</option>          <option value="http://eng.ajou.ac.kr">공과대학</option>          <option value="http://it.ajou.ac.kr">정보통신대학</option>          <option value="http://ns.ajou.ac.kr">자연과학대학</option>		  <option value="http://biz.ajou.ac.kr">경영대학</option>		  <option value="http://coss.ajou.ac.kr">사회과학대학</option>		  <option value="http://human.ajou.ac.kr">인문대학</option>		  <option value="http://law.ajou.ac.kr">법과대학</option>		  <option value="http://medicine.ajou.ac.kr">의과대학</option>		  <option value="http://nursing.ajou.ac.kr">간호대학</option>		  <option value="http://pharm.ajou.ac.kr">약학대학</option>		  <option value="http://uc.ajou.ac.kr">기초교육대학</option>		  <option value="http://isa.ajou.ac.kr">국제학부</option>		  <option value="http://test.ajou.ac.kr/kr/uni/lawschool.jsp">전문대학원</option>		  <option value="http://test.ajou.ac.kr/kr/uni/gsis.jsp">특수대학원</option>        </select>	<input type="image" alt="대학/대학원사이트바로가기(새창)" src="/_resources/kr/img/common/foot_btn_go.gif" /></form>												
-		
-		
-		
-		
-		
-		
-		
-		
-		</div>
-		<div class="jwxe_html" style="left:829px;top:80px;"><form action="/_common/jsp/redirect.jsp" method="post" target="_blank">
-	<label for="major" style="position: absolute; left: -999em;">주요기관 링크</label> <select id="major" name="link" style="border: 1px solid #D2D2D2; font-size: 12px; width:125px; height:22px; margin-right:-2px;"><option selected="selected" value="">중요기관 링크 선택</option><option value="http://www.ajoumc.or.kr/">의료원</option><option value="http://library.ajou.ac.kr/">중앙도서관</option><option value="http://www.iajou.ac.kr/">입학처</option><option value="http://ace.ajou.ac.kr">대학교육혁신원</option><option value="http://iacf.ajou.ac.kr/">산학협력단</option><option value="http://ali.ajou.ac.kr/">어학교육원</option><option value="http://cll.ajou.ac.kr/">평생교육원</option><option value="http://apcc1721.ajou.ac.kr/apcc1721/index.jsp">아주심리상담센터</option><option value="http://cmcm.ajou.ac.kr/">공동기기센터</option><option value="http://ajoua.or.kr/">총동문회</option><option value="https://cge.ajou.ac.kr:444/main/main.php">과학영재교육원</option></select> <input alt="대학/대학원사이트바로가기(새창)" src="/_resources/kr/img/common/foot_btn_go.gif" type="image" />&nbsp;</form>
-
-		</div>
-</div></div>
-		</div>
-	</div>
-</div>
-<noscript><p>이 사이트는 자바스크립트를 지원하지 않으면 정상적으로 보이지 않을수 있습니다.</p></noscript>
-</body>
-</html>
