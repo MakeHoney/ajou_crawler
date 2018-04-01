@@ -55,9 +55,9 @@ Nokogiri::HTML(open(url))가 반환하는 타입은 문자열이 아니라 Nokog
 코드를 수정했다. gsub에 /<[가-힣]/ 라는 정규표현식을 이용하여 문제를 해결하였다.(*gsub이 콜백형태로 쓰일 수 있다는 것도 처음 알았다.)
 < 뒤에 한글이오거나 한글 뒤에 >가 오는 것에 해당되는 꺽쇠들을 전부 엔티티 코드로 치환하였다. 
 
-![1](https://user-images.githubusercontent.com/31656287/38175293-549db9b0-3615-11e8-82ca-1ee8841dd5a9.png)
+![2](https://user-images.githubusercontent.com/31656287/38175294-583cd02e-3615-11e8-8746-3f7036fc1703.png)
 
 이제 좀더 보기 좋은 형태로(식당별로) 정리하는 일을 해야겠지? 아래는 긁어온 3월 30일자 메뉴다.
 
-![2](https://user-images.githubusercontent.com/31656287/38175294-583cd02e-3615-11e8-8746-3f7036fc1703.png)
+![1](https://user-images.githubusercontent.com/31656287/38175293-549db9b0-3615-11e8-82ca-1ee8841dd5a9.png)
 
