@@ -165,29 +165,9 @@ $(function() {
 		<tr>
 			<td>
 				점심</td>
-			<td class="no_right left_pd" colspan="2">
+			<td class="no_right_left_pd" colspan="2">
 				<ul class="tri_list02">
-				<li>&lt;가마A-4,000원&gt;    
-</li><li>뚝배기제육불고기/쌀밥/사각어묵볶음/콘샐러드/깍두기     
-</li><li>&lt;가마B-3,300원&gt;      
-</li><li>추억의도시락/맑은우동국물/단무지     
-</li><li>&lt;모던보울-4,000원&gt;      
-</li><li>치즈함박스테이크/쌀밥/토마토스파게티/맑은우동국물/단무지      
-</li><li>&lt;인터쉐프A-4,000원&gt;      
-</li><li>나시고랭/야채춘권/맑은우동국물/단무지      
-</li><li>&lt;인터쉐프B-4,000원&gt;      
-</li><li>마늘간장만두돈까스덮밥/맑은우동국물/단무지      
-</li><li>&lt;델리버스A-4,000원&gt;      
-</li><li>떡락면/쌀밥/파닭/단무지      
-</li><li>&lt;델리버스-3,300원&gt;      
-</li><li>파닭/쌀밥/맑은우동국물/단무지      
-</li><li>&lt;가마C>      
-</li><li>즉석라면 1,700원      
-</li><li>만두라면/떡라면/치즈라면 2,000원      
-</li><li>떡만두라면/치즈떡라면/치즈만두라면 2,300원      
-</li><li>공기밥 별도 1,000원      
-</li><li>*운영시간 09:00 ~ 18:30 (주문가능시간 ~18:10)      
-</li><li>*라면은 10:00~16:00까지 운영하지 않습니다.      </li>
+				<li>&lt;가마A-4,000원&gt;    </li><li>뚝배기제육불고기/쌀밥/사각어묵볶음/콘샐러드/깍두기     </li><li>&lt;가마B-3,300원&gt;      </li><li>추억의도시락/맑은우동국물/단무지     </li><li>&lt;모던보울-4,000원&gt;      </li><li>치즈함박스테이크/쌀밥/토마토스파게티/맑은우동국물/단무지      </li><li>&lt;인터쉐프A-4,000원&gt;      </li><li>나시고랭/야채춘권/맑은우동국물/단무지      </li><li>&lt;인터쉐프B-4,000원&gt;      </li><li>마늘간장만두돈까스덮밥/맑은우동국물/단무지      </li><li>&lt;델리버스A-4,000원&gt;      </li><li>떡락면/쌀밥/파닭/단무지      </li><li>&lt;델리버스-3,300원&gt;      </li><li>파닭/쌀밥/맑은우동국물/단무지      </li><li>&lt;가마C>      </li><li>즉석라면 1,700원      </li><li>만두라면/떡라면/치즈라면 2,000원      </li><li>떡만두라면/치즈떡라면/치즈만두라면 2,300원      </li><li>공기밥 별도 1,000원      </li><li>*운영시간 09:00 ~ 18:30 (주문가능시간 ~18:10)      </li><li>*라면은 10:00~16:00까지 운영하지 않습니다.      </li>
 				</ul>
 			</td>
 		</tr>
@@ -235,20 +215,9 @@ $(function() {
 				<img alt="기숙사식당의 전경" src="/_resources/kr/img/life/img_food_03.gif" /></td>
 		
 			<td>아침</td>
-			<td class="no_right left_pd" colspan="2">
+			<td class="no_right_left_pd" colspan="2">
 				<ul class="tri_list02">
-				<li>조식/백반 - 3,000원&gt;
-</li><li>쌀밥(일반미:국내산)
-</li><li>배추된장국
-</li><li>돈까스&소스
-</li><li>콩자반
-</li><li>배추김치(배추, 고춧가루-중국산)
-</li><li>자두쥬스
-</li><li>&lt;조식/빵 - 3,000원&gt;
-</li><li>토스트&딸기쨈and버터, 후랑크소시지, 달걀후라이, 시리얼, 우유 
-</li><li>※계란후라이 (500원) 별도 판매
-</li><li>(토스트는 계란후라이 포함입니다)
-</li><li>※ 운영시간 : 08:10~10:00</li>
+				<li>조식/백반 - 3,000원&gt;</li><li>쌀밥(일반미:국내산)</li><li>배추된장국</li><li>돈까스&소스</li><li>콩자반</li><li>배추김치(배추, 고춧가루-중국산)</li><li>자두쥬스</li><li>&lt;조식/빵 - 3,000원&gt;</li><li>토스트&딸기쨈and버터, 후랑크소시지, 달걀후라이, 시리얼, 우유 </li><li>※계란후라이 (500원) 별도 판매</li><li>(토스트는 계란후라이 포함입니다)</li><li>※ 운영시간 : 08:10~10:00</li>
 				</ul>
 			</td>
 		
@@ -259,39 +228,9 @@ $(function() {
 		<tr>
 			<td>
 				점심</td>
-			<td class="no_right left_pd" colspan="2">
+			<td class="no_right_left_pd" colspan="2">
 				<ul class="tri_list02">
-				<li>&lt;중식/한식 - 4,000원&gt;
-</li><li>쌀밥(일반미:국내산)
-</li><li>뚝)치즈닭갈비(계육:브라질산)
-</li><li>고구마고로케
-</li><li>배추김치(배추,고춧가루:중국산)
-</li><li>&lt;중*석식/양식 - 4,000원&gt; 
-</li><li>쌀밥
-</li><li>불고기필라프
-</li><li>두부된장국
-</li><li>로제파스타
-</li><li>그린샐러드*드레싱
-</li><li>배추김치(배추,고춧가루:중국산)
-</li><li>오이피클
-</li><li>&lt;중*석식/퓨전 - 3,300원&gt; 
-</li><li>치킨마요덮밥(계육:국내산)
-</li><li>두부된장국
-</li><li>단무지
-</li><li>※ 운영시간 : 11:00~15:30 (한식,양식)
-</li><li>11:00~15:00 (라면)
-</li><li>11:00~14:00 (일품) 
-</li><li>&lt;버거감 Burger Gamㅡ 메뉴&gt; 
-</li><li>Time 10:00 ~ 18:50 
-</li><li>Break Time 15:00 ~ 16:00 
-</li><li>-Classic Burger- 
-</li><li>Bulgogi / Chicken / Shrimp 2
-</li><li>- 1Choice : 2,500원 
-</li><li>- Set Menu : 4,500원 
-</li><li>-Premium Burger- 
-</li><li>HAPI , MAMI, PAPA, Double PAPA 
-</li><li>- 1Choice : 3,500원 
-</li><li>-Set Menu : 5,500원</li>
+				<li>&lt;중식/한식 - 4,000원&gt;</li><li>쌀밥(일반미:국내산)</li><li>뚝)치즈닭갈비(계육:브라질산)</li><li>고구마고로케</li><li>배추김치(배추,고춧가루:중국산)</li><li>&lt;중*석식/양식 - 4,000원&gt; </li><li>쌀밥</li><li>불고기필라프</li><li>두부된장국</li><li>로제파스타</li><li>그린샐러드*드레싱</li><li>배추김치(배추,고춧가루:중국산)</li><li>오이피클</li><li>&lt;중*석식/퓨전 - 3,300원&gt; </li><li>치킨마요덮밥(계육:국내산)</li><li>두부된장국</li><li>단무지</li><li>※ 운영시간 : 11:00~15:30 (한식,양식)</li><li>11:00~15:00 (라면)</li><li>11:00~14:00 (일품) </li><li>&lt;버거감 Burger Gamㅡ 메뉴&gt; </li><li>Time 10:00 ~ 18:50 </li><li>Break Time 15:00 ~ 16:00 </li><li>-Classic Burger- </li><li>Bulgogi / Chicken / Shrimp 2</li><li>- 1Choice : 2,500원 </li><li>- Set Menu : 4,500원 </li><li>-Premium Burger- </li><li>HAPI , MAMI, PAPA, Double PAPA </li><li>- 1Choice : 3,500원 </li><li>-Set Menu : 5,500원</li>
 				</ul>
 			</td>
 		</tr>
@@ -301,29 +240,9 @@ $(function() {
 		<tr>
 			<td>
 				저녁</td>
-			<td class="no_right left_pd" colspan="2">
+			<td class="no_right_left_pd" colspan="2">
 				<ul class="tri_list02">
-				<li>&lt;중식/한식 - 4,000원&gt;
-</li><li>쌀밥(일반미:국내산)
-</li><li>뚝)치즈닭갈비(계육:브라질산)
-</li><li>고구마고로케
-</li><li>배추김치(배추,고춧가루:중국산)
-</li><li>&lt;중*석식/양식 - 4,000원&gt; 
-</li><li>쌀밥
-</li><li>불고기필라프
-</li><li>두부된장국
-</li><li>로제파스타
-</li><li>그린샐러드*드레싱
-</li><li>배추김치(배추,고춧가루:중국산)
-</li><li>오이피클
-</li><li>&lt;석식/한식 -3,800원&gt;
-</li><li>쌀밥
-</li><li>설렁탕&소면
-</li><li>깐풍기
-</li><li>청포묵김가루무침
-</li><li>배추김치(배추,고춧가루:중국산)
-</li><li>※ 운영시간 : 17:00~19:00(한식,양식)(식권마감시간:18:45)
-</li>
+				<li>&lt;중식/한식 - 4,000원&gt;</li><li>쌀밥(일반미:국내산)</li><li>뚝)치즈닭갈비(계육:브라질산)</li><li>고구마고로케</li><li>배추김치(배추,고춧가루:중국산)</li><li>&lt;중*석식/양식 - 4,000원&gt; </li><li>쌀밥</li><li>불고기필라프</li><li>두부된장국</li><li>로제파스타</li><li>그린샐러드*드레싱</li><li>배추김치(배추,고춧가루:중국산)</li><li>오이피클</li><li>&lt;석식/한식 -3,800원&gt;</li><li>쌀밥</li><li>설렁탕&소면</li><li>깐풍기</li><li>청포묵김가루무침</li><li>배추김치(배추,고춧가루:중국산)</li><li>※ 운영시간 : 17:00~19:00(한식,양식)(식권마감시간:18:45)</li>
 				</ul>
 			</td>
 		</tr>
@@ -333,12 +252,9 @@ $(function() {
 		<tr>
 			<td>
 				분식</td>
-			<td class="no_right left_pd" colspan="2">
+			<td class="no_right_left_pd" colspan="2">
 				<ul class="tri_list02">
-				<li>&lt;분식 - 라면 2,800원&gt; 
-</li><li>떡, 치즈, 만두라면&lt;택1> 
-</li><li>쌀밥(일반미:국내산) 
-</li><li>배추김치(배추, 고춧가루-중국산)or 깍두기</li>
+				<li>&lt;분식 - 라면 2,800원&gt; </li><li>떡, 치즈, 만두라면&lt;택1> </li><li>쌀밥(일반미:국내산) </li><li>배추김치(배추, 고춧가루-중국산)or 깍두기</li>
 				</ul>
 			</td>
 		</tr>
