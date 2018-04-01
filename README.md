@@ -61,3 +61,9 @@ Nokogiri::HTML(open(url))가 반환하는 타입은 문자열이 아니라 Nokog
 
 ![1](https://user-images.githubusercontent.com/31656287/38175293-549db9b0-3615-11e8-82ca-1ee8841dd5a9.png)
 
+
+
+2018.04.02 <br>
+식당별 구획, 아침점심저녁 구분 추가
+
+things to do : 교직원식당 구획나누기, 아침점심저녁 선택가능하도록 조치

@@ -50,4 +50,4 @@ end
 
 test = SchoolFood.new()
 
-test.dormFoodCourt
+test.studentFoodCourt
