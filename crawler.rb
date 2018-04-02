@@ -10,14 +10,14 @@ class SchoolFood
 
 	def initialize
 		@html = HTTP.get('http://www.ajou.ac.kr/kr/life/food.jsp').to_s
-		@html = fixUrl(@html)
+		@html = fixHtml(@html)
 		@page = Nokogiri::HTML(@html)
 	end
 
-	def fixUrl(html)
+	def fixHtml(html)
 		html.gsub!('no_right left_pd', 'no_right_left_pd')	
 		# html 문서 내의 class 명에 띄어쓰기를 써놓는 기염을 토해놓으신 개발자분...덕에 위 코드 한 줄이 추가되었다.
-		html.gsub!(/<[가-힣]/) {|s| s = '※&lt;' + s[1]}
+		html.gsub!(/<[가-힣]/) {|s| s = '※ &lt;' + s[1]}
 		html.gsub!(/[가-힣]>/) {|s| s = s[0] + '&gt;'}
 	end
 	
