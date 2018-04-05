@@ -25,7 +25,6 @@
 <img src="https://user-images.githubusercontent.com/31656287/38167159-aa4524b6-356b-11e8-97d9-3daf2168ef1e.png">
 
 그렇지 않으면 나같은 사람이 크롤링을 할 경우... 아래와 같이 식단의 맨 앞글자가 짤리는 수가 있다...(주된 문제점은 이게 아니었지만)
-추된장국..추김치..추장불고기... 추장이 먹는 불고긴가... ㅈㅅ
 
 <img src="https://user-images.githubusercontent.com/31656287/38167187-323177b2-356c-11e8-92f2-b9366467fc1b.png">
 
