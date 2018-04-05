@@ -15,13 +15,12 @@ class SchoolFood
 	end
 
 	def fixHtml(html)
-		html.gsub!('no_right left_pd', 'no_right_left_pd')	
 		html.gsub!(/<[가-힣]/) {|s| s = '※ &lt;' + s[1]}
 		html.gsub!(/[가-힣]>/) {|s| s = s[0] + '&gt;'}
 	end
 	
 	def studentFoodCourt
-		@page.css('table.ajou_table')[0].css('td.no_right_left_pd li').each do |li|
+		@page.css('table.ajou_table')[0].css('td.no_right li').each do |li|
 			puts li.text
 		end	
 	end
