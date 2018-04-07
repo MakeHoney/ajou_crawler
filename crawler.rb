@@ -49,6 +49,20 @@ end
 
 class Notice
 	@home; @html; @url; @page; @totalNum
+	@codeForNotice = {
+		'schoolAffair' => '76',
+		'nonSubject' => '290',
+		'scholarship' => '77',
+		'academic' => '78',
+		'admission' => '79',
+		'job' => '80',
+		'office' => '84',
+		'event' => '85',
+		'etc' => '86',
+		'paran' => '317'
+	}
+
+	# search:search_category:category=76
 	attr_accessor :totalNum
 	def initialize
 		@home = 'http://www.ajou.ac.kr'
@@ -59,6 +73,7 @@ class Notice
 	end
 
 	def numOfPost
+
 		endPageUrl = @home + @page.css('.pager_wrap a[title="끝"]')[0]['href'].to_s
 		# a 태그 중에 title의 속성이 '끝'인 라인을 불러온다.
 		# @page.css('div.pager_wrap a[title="끝"]')는 배열로 저장이 되기 때문에
@@ -71,7 +86,6 @@ class Notice
 		entireNumOfPost = partial1 + partial2
 		return entireNumOfPost
 	end
-
 end
 
 # test = SchoolFood.new()
