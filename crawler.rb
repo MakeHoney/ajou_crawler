@@ -48,22 +48,23 @@ class SchoolFood
 end
 
 class Notice
+	attr_accessor :totalNum
 	@home; @html; @url; @page; @totalNum
 	@codeForNotice = {
-		'schoolAffair' => '76',
-		'nonSubject' => '290',
-		'scholarship' => '77',
-		'academic' => '78',
-		'admission' => '79',
-		'job' => '80',
-		'office' => '84',
-		'event' => '85',
-		'etc' => '86',
-		'paran' => '317'
+		'schoolAffair' => '76',	# 학사
+		'nonSubject' => '290',	# 비교과
+		'scholarship' => '77',	# 장학
+		'academic' => '78',		# 학술
+		'admission' => '79',	# 입학
+		'job' => '80',			# 취업
+		'office' => '84',		# 사무
+		'event' => '85',		# 행사
+		'etc' => '86',			# 기타
+		'paran' => '317'		# 파란학기제
 	}
 
 	# search:search_category:category=76
-	attr_accessor :totalNum
+
 	def initialize
 		@home = 'http://www.ajou.ac.kr'
 		@url = @home + '/new/ajou/notice.jsp'
@@ -73,7 +74,6 @@ class Notice
 	end
 
 	def numOfPost
-
 		endPageUrl = @home + @page.css('.pager_wrap a[title="끝"]')[0]['href'].to_s
 		# a 태그 중에 title의 속성이 '끝'인 라인을 불러온다.
 		# @page.css('div.pager_wrap a[title="끝"]')는 배열로 저장이 되기 때문에
