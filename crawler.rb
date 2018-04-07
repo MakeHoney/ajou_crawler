@@ -11,7 +11,7 @@ class SchoolFood
 	def initialize
 		url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
 		html = fixHtml(open(url).read)
-		# open(@url)은 오브젝트명을 반환 open(@url).read는 html문서 반환
+		# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
 		@page = Nokogiri::HTML(html)
 	end
 
@@ -74,10 +74,9 @@ class Notice
 			url = @notice
 		else
 			url = @notice + "?search:search_category:category=#{@@codeForNotice[key]}"
-			puts @url
 		end
-
 		# Ruby에서는 생성자 오버로딩을 지원하지 않는다.
+		# 때문에 조건문을 통해서 처리하였다.
 		@page = Nokogiri::HTML(open(url).read)
 		@totalNum = numOfPost
 	end
@@ -96,15 +95,21 @@ class Notice
 		return entireNumOfPost
 	end
 
-	# def method_name(key)
-	# 	url = 
-		
-	# end
+	def printNotice(userNumOfNotice)
+		newNotice = @totalNum - userNumOfNotice
+		puts "총 #{newNotice}개의 새로운 공지가 있습니다."
+		puts "총 게시물의 수 : #{@totalNum}"
+		newNotice.times do |i|
+			puts @page.css('.list_wrap a')[i].text
+		end
+		# puts @page.css('.list_wrap a').text
+		# puts tmpNotice
+	end
 end
 
 # test = SchoolFood.new()
 
 # test.dormFoodCourt
 
-test = Notice.new('paran')
-puts test.totalNum
+test = Notice.new('home')
+test.printNotice(6893)
