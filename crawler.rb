@@ -6,13 +6,13 @@ require 'nokogiri'
 	# f.puts @html #	파일 입출력을 이용하여 문서 디버깅
 
 class SchoolFood
-	@html; @page; @url
+	@page;
 
 	def initialize
-		@url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
-		@html = fixHtml(open(@url).read)
+		url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
+		html = fixHtml(open(url).read)
 		# open(@url)은 오브젝트명을 반환 open(@url).read는 html문서 반환
-		@page = Nokogiri::HTML(@html)
+		@page = Nokogiri::HTML(html)
 	end
 
 	def fixHtml(html)
@@ -49,8 +49,8 @@ end
 
 class Notice
 	attr_accessor :totalNum
-	@home; @html; @url; @page; @totalNum
-	@codeForNotice = {
+	@home; @notice; @page; @totalNum
+	@@codeForNotice = {
 		'schoolAffair' => '76',	# 학사
 		'nonSubject' => '290',	# 비교과
 		'scholarship' => '77',	# 장학
@@ -64,12 +64,21 @@ class Notice
 	}
 
 	# search:search_category:category=76
-
-	def initialize
+	# http://www.ajou.ac.kr/new/ajou/notice.jsp?mode=list
+	# http://www.ajou.ac.kr/new/ajou/notice.jsp?search:search_category:category=77
+	def initialize(key)
 		@home = 'http://www.ajou.ac.kr'
-		@url = @home + '/new/ajou/notice.jsp'
-		@html = open(@url).read
-		@page = Nokogiri::HTML(@html)
+		@notice = @home + '/new/ajou/notice.jsp'
+
+		if(key.eql?("home"))
+			url = @notice
+		else
+			url = @notice + "?search:search_category:category=#{@@codeForNotice[key]}"
+			puts @url
+		end
+
+		# Ruby에서는 생성자 오버로딩을 지원하지 않는다.
+		@page = Nokogiri::HTML(open(url).read)
 		@totalNum = numOfPost
 	end
 
@@ -86,11 +95,16 @@ class Notice
 		entireNumOfPost = partial1 + partial2
 		return entireNumOfPost
 	end
+
+	# def method_name(key)
+	# 	url = 
+		
+	# end
 end
 
 # test = SchoolFood.new()
 
 # test.dormFoodCourt
 
-test = Notice.new()
+test = Notice.new('paran')
 puts test.totalNum
