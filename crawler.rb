@@ -1,4 +1,3 @@
-require 'http'
 require 'open-uri'
 require 'nokogiri'
 
@@ -49,7 +48,7 @@ module Crawler
 
 	class Notice
 		attr_accessor :totalNum
-		@home; @notice; @page; @totalNum
+		@home; @page; @totalNum
 		@@codeForNotice = {
 			'schoolAffair' => '76',	# 학사
 			'nonSubject' => '290',	# 비교과
@@ -65,12 +64,12 @@ module Crawler
 
 		def initialize(key)
 			@home = 'http://www.ajou.ac.kr'
-			@notice = @home + '/new/ajou/notice.jsp'
+			notice = @home + '/new/ajou/notice.jsp'
 
 			if(key.eql?("home"))
-				url = @notice
+				url = notice
 			else
-				url = @notice + "?search:search_category:category=#{@@codeForNotice[key]}"
+				url = notice + "?search:search_category:category=#{@@codeForNotice[key]}"
 			end
 			# Ruby에서는 생성자 오버로딩을 지원하지 않는다.
 			# 때문에 조건문을 통해서 처리하였다.
@@ -107,4 +106,8 @@ end
 # test.dormFoodCourt
 
 test = Crawler::Notice.new('home')
+# 시나리오
+# 카카오 유저로부터 "장학"선택을 받음 => Crawler::Notice.new('scholarship')
+# 카카오 유저키를 id로 유저 db에 접근하여 장학에 해당하는 integer value를 가져옴
 test.printNotice(6893)
+# test.printNotice(DB로부터 가져온 value를 인자로 넣음)
