@@ -103,12 +103,17 @@ require 'nokogiri'
 	end
 
 	class Vacancy
-		@restC; @restD; @totalC; @totalD
+		@rest = ['C', 'D']; page[]
+		# @restC; @restD; @totalC; @totalD
 		def initialize
-			url = 'http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0C1'
-			html = fixHtml(open(url).read)
-			@page = Nokogiri::HTML(html)
+			2.times do |i|
+				url = 'http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0@{rest[i]}1'
+				html = open(url).read
+				@page[i] = Nokogiri::HTML(html)
+			end
 		end		
+		
+
 	end
 end
 # test = Crawler::SchoolFood.new()

@@ -70,8 +70,9 @@ things to do : 교직원식당 구획나누기, 아침점심저녁 선택가능�
 
 http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=undefined 에서 각 열람실 url을 아래와 같이 추출하였다.
 <p>
-	http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0D1
+	http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0C1
 </p>
 <p>
 	http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0D1
 </p>
+*Nokogiri 모듈을 생성자에 넣어놓는 것은 성능을 저하시키는가?
