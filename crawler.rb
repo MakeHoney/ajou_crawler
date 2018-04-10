@@ -5,7 +5,7 @@ require 'nokogiri'
 	# f.puts @html #	파일 입출력을 이용하여 문서 디버깅
 	module Crawler
 		class SchoolFood
-			@page
+			# @page
 
 			def initialize
 				url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
@@ -48,7 +48,7 @@ require 'nokogiri'
 
 	class Notice
 		attr_accessor :totalNum
-		@home; @page; @totalNum
+		# @home; @page; @totalNum
 		@@codeForNotice = {
 			'schoolAffair' => '76',	# 학사
 			'nonSubject' => '290',	# 비교과
@@ -96,32 +96,50 @@ require 'nokogiri'
 			newNotice = @totalNum - userNumOfNotice
 			puts "총 #{newNotice}개의 새로운 공지가 있습니다."
 			puts "총 게시물의 수 : #{@totalNum}"
-			newNotice.times do |i|
+
+			iter = newNotice > 10 ? 10 : newNotice
+			# 새로운 게시물이 10개 이상일 경우 최대 10개만 보여준다.
+			iter.times do |i|
 				puts @page.css('.list_wrap a')[i].text
 			end
 		end
 	end
 
 	class Vacancy
-		@rest = ['C', 'D']; page[]
-		# @restC; @restD; @totalC; @totalD
 		def initialize
+			@pages = []; @room = ['C', 'D']
 			2.times do |i|
-				url = 'http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0@{rest[i]}1'
+				url = "http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0#{@room[i]}1"
 				html = open(url).read
-				@page[i] = Nokogiri::HTML(html)
+				@pages << Nokogiri::HTML(html)
 			end
-		end		
-		
-
+		end
+		def printVacancy
+			retStr = ['', '', '', '']
+			2.times do |i|	# C1, D1
+			tmp = @pages[i].css('td[valign="middle"]')[1].text.split
+				5.times do |j|
+					retStr[0 + 2*i] += tmp[4 + j]
+				end
+				3.times do |j|
+					retStr[1 + 2*i] += tmp[10 + j]
+				end
+			end
+		end
 	end
 end
 # test = Crawler::SchoolFood.new()
 # test.dormFoodCourt
 
-test = Crawler::Notice.new('home')
-# 시나리오
-# 카카오 유저로부터 "장학"선택을 받음 => Crawler::Notice.new('scholarship')
-# 카카오 유저키를 id로 유저 db에 접근하여 장학에 해당하는 integer value를 가져옴
-test.printNotice(6893)
-# test.printNotice(DB로부터 가져온 value를 인자로 넣음)
+# test = Crawler::Notice.new('home')
+# # 시나리오
+# # 카카오 유저로부터 "장학"선택을 받음 => Crawler::Notice.new('scholarship')
+# # 카카오 유저키를 id로 유저 db에 접근하여 장학에 해당하는 integer value를 가져옴
+# test.printNotice(6893)
+# # test.printNotice(DB로부터 가져온 value를 인자로 넣음)
+
+test = Crawler::Vacancy.new()
+test.printVacancy
+# test.printVacancy.each do |page|
+# 	puts page
+# end
