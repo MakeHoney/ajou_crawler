@@ -67,3 +67,11 @@ Nokogiri::HTML(open(url))가 반환하는 타입은 문자열이 아니라 Nokog
 
 things to do : 교직원식당 구획나누기, 아침점심저녁 선택가능하도록 조치, 카카오봇에 연동해보기, 공지사항 크롤링하기(o), 
 도서관 공석열람기능 추가 (http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus), 소학회, 과별공지사항 향후 고려
+
+http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=undefined 에서 각 열람실 url을 아래와 같이 추출하였다.
+<p>
+	http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0D1
+</p>
+<p>
+	http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0D1
+</p>

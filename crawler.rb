@@ -3,13 +3,13 @@ require 'nokogiri'
 
 	# f = File.open('test.txt', 'w')
 	# f.puts @html #	파일 입출력을 이용하여 문서 디버깅
-module Crawler
-	class SchoolFood
-		@page;
+	module Crawler
+		class SchoolFood
+			@page
 
-		def initialize
-			url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
-			html = fixHtml(open(url).read)
+			def initialize
+				url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
+				html = fixHtml(open(url).read)
 			# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
 			@page = Nokogiri::HTML(html)
 		end
@@ -41,7 +41,7 @@ module Crawler
 
 		def wholeList
 			@page.css('table.ajou_table li').each do |li|
-			puts li.text
+				puts li.text
 			end		
 		end
 	end
@@ -100,6 +100,15 @@ module Crawler
 				puts @page.css('.list_wrap a')[i].text
 			end
 		end
+	end
+
+	class Vacancy
+		@restC; @restD; @totalC; @totalD
+		def initialize
+			url = 'http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0C1'
+			html = fixHtml(open(url).read)
+			@page = Nokogiri::HTML(html)
+		end		
 	end
 end
 # test = Crawler::SchoolFood.new()
