@@ -107,9 +107,9 @@ require 'nokogiri'
 
 	class Vacancy
 		def initialize
-			@pages = []; @room = ['C', 'D']
+			@pages = []; @room = ['C1', 'D1']
 			2.times do |i|
-				url = "http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0#{@room[i]}1"
+				url = "http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0#{@room[i]}"
 				html = open(url).read
 				@pages << Nokogiri::HTML(html)
 			end
@@ -124,6 +124,11 @@ require 'nokogiri'
 				3.times do |j|
 					retStr[1 + 2*i] += tmp[10 + j]
 				end
+			end
+
+			2.times do |i|
+				puts "#{@room[i]} 열람실의 이용 현황"
+				print "#{retStr[i]} | #{retStr[i + 1]}\n\n"
 			end
 		end
 	end
