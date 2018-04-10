@@ -6,10 +6,9 @@ require 'nokogiri'
 	module Crawler
 		class SchoolFood
 			# @page
-
-			def initialize
-				url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
-				html = fixHtml(open(url).read)
+		def initialize
+			url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
+			html = fixHtml(open(url).read)
 			# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
 			@page = Nokogiri::HTML(html)
 		end
@@ -20,12 +19,20 @@ require 'nokogiri'
 		end
 		
 		def studentFoodCourt
+			retStr = ""
 			@page.css('table.ajou_table')[0].css('td.no_right li').each do |li|
-				puts li.text
-			end	
+				retStr += "#{li.text}\n"
+				# puts li.text
+			end
+			if retStr.empty?
+				return "등록된 식단이 없습니다."
+			else
+				return retStr
+			end
 		end
 
 		def dormFoodCourt
+			retStr = ""
 			time = ['아침', '점심', '저녁']
 
 			3.times do |i|
@@ -33,10 +40,11 @@ require 'nokogiri'
 				@page.css('table.ajou_table')[1].
 				css('td.no_right')[i + 1].		# 아침 점심 저녁 선택자
 				css('li').each do |li|
-					puts li.text
+					retStr += "#{li.text}\n"
 				end	
-				puts "\n\n"
+				retStr += "\n\n"
 			end
+			return retStr
 		end
 
 		def wholeList
@@ -133,8 +141,8 @@ require 'nokogiri'
 		end
 	end
 end
-# test = Crawler::SchoolFood.new()
-# test.dormFoodCourt
+test = Crawler::SchoolFood.new()
+test.studentFoodCourt
 
 # test = Crawler::Notice.new('home')
 # # 시나리오
@@ -143,8 +151,8 @@ end
 # test.printNotice(6893)
 # # test.printNotice(DB로부터 가져온 value를 인자로 넣음)
 
-test = Crawler::Vacancy.new()
-test.printVacancy
+# test = Crawler::Vacancy.new()
+# test.printVacancy
 # test.printVacancy.each do |page|
 # 	puts page
 # end
