@@ -19,12 +19,15 @@ require 'nokogiri'
 		end
 		
 		def partition(string)
-			if string.include?("<") || string.include?(">") || string.include?("운영")
+			if (string.include?("<") || string.include?(">") || 
+				(string.include?("운영") && string.include?("시간")) || 
+				string.include?("Burger")) # && !string.include?("택") 을 넣을까..?
 				return true
 			else
 				return false
 			end
 		end
+
 
 		def studentFoodCourt
 			retStr = ""
@@ -36,6 +39,7 @@ require 'nokogiri'
 				# puts li.text
 			end
 
+			retStr.chomp!
 			if retStr.empty?
 				return "등록된 식단이 없습니다."
 			else
@@ -55,7 +59,9 @@ require 'nokogiri'
 					retStr[i] += "#{li.text}\n"
 					flag += 1
 				end	
+				retStr[i].chomp!
 			end
+			puts retStr
 			return retStr
 		end
 
@@ -68,6 +74,7 @@ require 'nokogiri'
 				css('li').each do |li|
 					retStr[i] += "#{li.text}\n"
 				end	
+				retStr[i].chomp!
 			end
 			return retStr
 		end
