@@ -18,12 +18,24 @@ require 'nokogiri'
 			html.gsub!(/[가-힣]>/) {|s| s = s[0] + '&gt;'}
 		end
 		
+		def partition(string)
+			if string.include?("<") || string.include?(">") || string.include?("운영")
+				return true
+			else
+				return false
+			end
+		end
+
 		def studentFoodCourt
 			retStr = ""
+			flag = 0
 			@page.css('table.ajou_table')[0].css('td.no_right li').each do |li|
+				retStr += "\n" if partition(li.text) && flag != 0
 				retStr += "#{li.text}\n"
+				flag += 1
 				# puts li.text
 			end
+
 			if retStr.empty?
 				return "등록된 식단이 없습니다."
 			else
@@ -32,25 +44,32 @@ require 'nokogiri'
 		end
 
 		def dormFoodCourt
-			retStr = ""
-			time = ['아침', '점심', '저녁']
+			retStr = ['', '', '', '']
 
-			3.times do |i|
-				puts "******** #{time[i]} ********\n"
+			4.times do |i|
+				flag = 0
 				@page.css('table.ajou_table')[1].
 				css('td.no_right')[i + 1].		# 아침 점심 저녁 선택자
 				css('li').each do |li|
-					retStr += "#{li.text}\n"
+					retStr[i] += "\n" if partition(li.text) && flag != 0
+					retStr[i] += "#{li.text}\n"
+					flag += 1
 				end	
-				retStr += "\n\n"
 			end
 			return retStr
 		end
 
-		def wholeList
-			@page.css('table.ajou_table li').each do |li|
-				puts li.text
-			end		
+		def facultyFoodCourt		# 식단이 없을 시 예외처리 추가
+			retStr = ['', '']
+
+			2.times do |i|
+				@page.css('table.ajou_table')[2].
+				css('td.no_right')[i + 1].		
+				css('li').each do |li|
+					retStr[i] += "#{li.text}\n"
+				end	
+			end
+			return retStr
 		end
 	end
 
@@ -124,20 +143,11 @@ require 'nokogiri'
 		end
 		def printVacancy
 			retStr = ['', '']
-			tmpBuff = ['', '', '', '']
 			2.times do |i|	# C1, D1
 			tmp = @pages[i].css('td[valign="middle"]')[1].text.split
-				5.times do |j|
-					tmpBuff[0 + 2*i] += tmp[4 + j]
-				end
-				3.times do |j|
-					tmpBuff[1 + 2*i] += tmp[10 + j]
-				end
-			end
-
-			2.times do |i|
-				retStr[i] += "#{@room[i]} 열람실의 이용 현황\n"
-				retStr[i] += "#{tmpBuff[i*2]} | #{tmpBuff[i*2 + 1]}\n\n"
+				retStr[i] += "◆ #{@room[i]} 열람실의 이용 현황\n\n"
+				retStr[i] += "  * 남은 자리 : #{tmp[6]}\n"
+				retStr[i] += "  * #{tmp[10]} : #{tmp[8].to_i - tmp[6].to_i} / #{tmp[8]} (#{tmp[12]})"
 			end
 
 			return retStr
@@ -145,17 +155,17 @@ require 'nokogiri'
 	end
 end
 test = Crawler::SchoolFood.new()
-test.studentFoodCourt
+test.dormFoodCourt
 
 # test = Crawler::Notice.new('home')
-# # 시나리오
-# # 카카오 유저로부터 "장학"선택을 받음 => Crawler::Notice.new('scholarship')
-# # 카카오 유저키를 id로 유저 db에 접근하여 장학에 해당하는 integer value를 가져옴
+# 시나리오
+# 카카오 유저로부터 "장학"선택을 받음 => Crawler::Notice.new('scholarship')
+# 카카오 유저키를 id로 유저 db에 접근하여 장학에 해당하는 integer value를 가져옴
 # test.printNotice(6893)
-# # test.printNotice(DB로부터 가져온 value를 인자로 넣음)
+# test.printNotice(DB로부터 가져온 value를 인자로 넣음)
 
-test = Crawler::Vacancy.new()
-puts test.printVacancy[1]
+# test = Crawler::Vacancy.new()
+# puts test.printVacancy[1]
 # test.printVacancy
 # test.printVacancy.each do |page|
 # 	puts page
