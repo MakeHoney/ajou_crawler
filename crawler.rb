@@ -5,17 +5,21 @@ require 'nokogiri'
 	# f.puts @html #	파일 입출력을 이용하여 문서 디버깅
 module Crawler
 	class SchoolFood
-			# @page
 		def initialize
-			url = 'http://www.ajou.ac.kr/kr/life/food.jsp?date=2017-08-06'
+			url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
 			html = fixHtml(open(url).read)
 			# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
 			@page = Nokogiri::HTML(html)
 		end
 
 		def fixHtml(html)
-			html.gsub!(/<[가-힣]/) {|s| s = '※ &lt;' + s[1]}
+			html.gsub!(/<[가-힣]/) {|s| s = '&lt;' + s[1]}
 			html.gsub!(/[가-힣]>/) {|s| s = s[0] + '&gt;'}
+			return html
+			# 명시적으로 html을 반환해주지 않을 경우, html문서에
+			# 위 정규표현식에 부합하는 lexeme이 하나도 없는 경우
+			# 아무것도 반환하지 않는다. 그래서 html문서가 빈 채로
+			# 반환되는 문제점이 발생한다.
 		end
 		
 		def partition(string)
@@ -59,7 +63,6 @@ module Crawler
 				length_for_exption = 
 				@page.xpath("//table[@class='ajou_table'][2]
 					//td[contains(text(), \"#{set[i]}\")]").length
-
 				if length_for_exption == 0
 					retStr[i] = "식단이 등록되지 않았어요!"
 					cnt -= 1
@@ -188,9 +191,9 @@ module Crawler
 	end
 end
 test = Crawler::SchoolFood.new()
-test.studentFoodCourt
-test.dormFoodCourt
-test.facultyFoodCourt
+puts test.studentFoodCourt
+puts test.dormFoodCourt
+puts test.facultyFoodCourt
 
 # test = Crawler::Notice.new('home')
 # 시나리오
