@@ -34,7 +34,7 @@ module Crawler
 
 
 		def studentFoodCourt
-			retStr = ""
+			retStr = ''
 			flag = 0
 			@page.css('table.ajou_table')[0].css('td.no_right li').each do |li|
 				retStr += "\n" if partition(li.text) && flag != 0
@@ -44,15 +44,18 @@ module Crawler
 			end
 
 			retStr.chomp!
+
 			if retStr.empty?
-				return "식단이 등록되지 않았어요!"
+				puts "stu : false"
+				return false
+				# return "식단이 등록되지 않았어요!"
 			else
 				return retStr
 			end
 		end
 
 		def dormFoodCourt
-			retStr = ['', '', '', '']
+			retStr = ['', '', '', '', false]
 			set = ['아침', '점심', '저녁', '분식']
 			cnt = 0
 
@@ -64,7 +67,7 @@ module Crawler
 				@page.xpath("//table[@class='ajou_table'][2]
 					//td[contains(text(), \"#{set[i]}\")]").length
 				if length_for_exption == 0
-					retStr[i] = "식단이 등록되지 않았어요!"
+					retStr[i] = false# "식단이 등록되지 않았어요!"
 					cnt -= 1
 				else
 					@page.css('table.ajou_table')[1].
@@ -77,13 +80,55 @@ module Crawler
 				end
 
 				cnt += 1	
-				retStr[i].chomp!
+				# 아침, 점심, 저녁, 분식 중 하나라도 식단이 존재하면
+				# retStr[4]의 값을 true로 변경한다. 다시말해서, 
+				# 모든 시간대의 식단이 없으면 retStr[4]의 값은 false이다.
+				# facultyFoodCourt() 메소드에서도 동일 알고리즘이 쓰인다.
+				retStr[4] = true if retStr[i]
+				retStr[i].chomp! if retStr[i]
 			end
+			puts "retStr[4] : #{retStr[4]}"
 			return retStr
+
+						# retHash = {
+			# 	breakfast: '',
+			# 	lunch: '',
+			# 	dinner: '',
+			# 	snack: ''
+			# }
+			# retStr = ['', '', '', '']
+			# set = ['아침', '점심', '저녁', '분식']
+			# cnt = 0
+
+			# 4.times do |i|
+			# 	flag = 0
+			# 	# 식단이 등록되어 있지 않은 경우 예외처리 => 변수 cnt와 xpath 이용
+			# 	# xpath는 index가 1부터 시작한다.
+			# 	length_for_exption = 
+			# 	@page.xpath("//table[@class='ajou_table'][2]
+			# 		//td[contains(text(), \"#{set[i]}\")]").length
+
+			# 	if length_for_exption == 0
+			# 		retStr[i] = "식단이 등록되지 않았어요!"
+			# 		cnt -= 1
+			# 	else
+			# 		@page.css('table.ajou_table')[1].
+			# 		css('td.no_right')[cnt + 1].		# 아침 점심 저녁 선택자
+			# 		css('li').each do |li|
+			# 			retStr[i] += "\n" if partition(li.text) && flag != 0
+			# 			retStr[i] += "#{li.text}\n"
+			# 			flag += 1
+			# 		end
+			# 	end
+
+			# 	cnt += 1	
+			# 	retStr[i].chomp!
+			# end
+			# return retStr
 		end
 
-		def facultyFoodCourt		# 식단이 없을 시 예외처리 추가
-			retStr = ['', '']
+		def facultyFoodCourt		
+			retStr = ['', '', false]
 			set = ['점심', '저녁']
 			cnt = 0
 
@@ -94,7 +139,7 @@ module Crawler
 					//td[contains(text(), \"#{set[i]}\")]").length
 				
 				if length_for_exption == 0
-					retStr[i] = "식단이 등록되지 않았어요!"
+					retStr[i] = false # "식단이 등록되지 않았어요!"
 				else
 					@page.css('table.ajou_table')[2].
 					css('td.no_right')[cnt + 1].		
@@ -103,8 +148,10 @@ module Crawler
 					end	
 				end
 				cnt += 1
-				retStr[i].chomp!
+				retStr[2] = true if retStr[i]
+				retStr[i].chomp! if retStr[i]
 			end
+			puts "facluty : #{retStr[2]}"
 			return retStr
 		end
 	end
