@@ -225,22 +225,22 @@ module Crawler
 			end
 		end
 		def printVacancy
-			retStr = ""
+			retStr = ['', '']
 			2.times do |i|	# C1, D1
 				tmp = @pages[i].css('td[valign="middle"]')[1].text.split
-				retStr += "◆ #{@room[i]} 열람실의 이용 현황\n"
-				retStr += "  * 남은 자리 : #{tmp[6]}\n"
-				retStr += "  * #{tmp[10]} : #{tmp[8].to_i - tmp[6].to_i} / #{tmp[8]} (#{tmp[12]})\n\n"
+				retStr[i] += "◆ #{@room[i]} 열람실의 이용 현황\n"
+				retStr[i] += "  * 남은 자리 : #{tmp[6]}\n"
+				retStr[i] += "  * #{tmp[10]} : #{tmp[8].to_i - tmp[6].to_i} / #{tmp[8]} (#{tmp[12]})"
+				retStr[i].chomp! if retStr[i]
 			end
-			2.times { retStr.chomp! } 
-			return retStr
+			return retStr	# retStr이 empty일 때 예외처리하기
 		end
 	end
 end
-test = Crawler::SchoolFood.new()
-puts test.studentFoodCourt
-puts test.dormFoodCourt
-puts test.facultyFoodCourt
+# test = Crawler::SchoolFood.new()
+# puts test.studentFoodCourt
+# puts test.dormFoodCourt
+# puts test.facultyFoodCourt
 
 # test = Crawler::Notice.new('home')
 # 시나리오
@@ -249,8 +249,8 @@ puts test.facultyFoodCourt
 # test.printNotice(6893)
 # test.printNotice(DB로부터 가져온 value를 인자로 넣음)
 
-# test = Crawler::Vacancy.new()
-# test.printVacancy
+test = Crawler::Vacancy.new()
+puts test.printVacancy
 
 # test.printVacancy.each do |page|
 # 	puts page
