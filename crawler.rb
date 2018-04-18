@@ -146,12 +146,13 @@ module Crawler
 					css('li').each do |li|
 						retStr[i] += "#{li.text}\n"
 					end	
+					retStr[i] += "\n＊운영시간\n점심 : 11:00 ~ 14:00\n저녁 : 17:00 ~ 19:00\n"
 				end
 				cnt += 1
 				retStr[2] = true if retStr[i]
 				retStr[i].chomp! if retStr[i]
 			end
-			puts "facluty : #{retStr[2]}"
+			puts retStr
 			return retStr
 		end
 	end
@@ -237,10 +238,10 @@ module Crawler
 		end
 	end
 end
-# test = Crawler::SchoolFood.new()
+test = Crawler::SchoolFood.new()
 # puts test.studentFoodCourt
 # puts test.dormFoodCourt
-# puts test.facultyFoodCourt
+puts test.facultyFoodCourt
 
 # test = Crawler::Notice.new('home')
 # 시나리오
@@ -249,8 +250,8 @@ end
 # test.printNotice(6893)
 # test.printNotice(DB로부터 가져온 value를 인자로 넣음)
 
-test = Crawler::Vacancy.new()
-puts test.printVacancy
+# test = Crawler::Vacancy.new()
+# puts test.printVacancy
 
 # test.printVacancy.each do |page|
 # 	puts page
