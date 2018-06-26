@@ -76,3 +76,6 @@ http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=undefin
 	http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0D1
 </p>
 *Nokogiri 모듈을 생성자에 넣어놓는 것은 성능을 저하시키는가?
+
+
+// 해쉬테이블 구조로 
