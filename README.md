@@ -41,7 +41,7 @@
 - #### Notice
 
   - ***numOfPost***
-  - printNotice
+  - ***printNotice***
 
 
 
