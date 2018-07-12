@@ -4,7 +4,7 @@
 >
 > Dependency : `Nokogiri`, `open-uri`
 
-
+<br />
 
 ### Description
 
@@ -15,9 +15,7 @@
 향후 학교 주변 교통 정보도 크롤링하는 메소드를 정의할 계획입니다.
 ~~~
 
-
-
-
+<br />
 
 ### Class
 
@@ -41,14 +39,14 @@
 
     교직원 식당의 식단을 크롤링하는 메소드
 
-
+<br />
 
 - #### Notice
 
   - ***numOfPost***
   - ***printNotice***
 
-
+<br />
 
 - #### Vacancy
 
