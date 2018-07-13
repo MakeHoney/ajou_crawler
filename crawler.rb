@@ -1,8 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
 
-	# f = File.open('test.txt', 'w')
-	# f.puts @html #	파일 입출력을 이용하여 문서 디버깅
 module Crawler
 	class SchoolFood
 		def initialize
@@ -55,7 +53,15 @@ module Crawler
 		end
 
 		def dormFoodCourt
-			retStr = ['', '', '', '', false]
+			retHash = {
+				breakfast: '',
+				lunch: '',
+				dinner: '',
+				snack: ''
+			}
+
+			keys = retHash.keys
+
 			set = ['아침', '점심', '저녁', '분식']
 			cnt = 0
 
@@ -66,65 +72,26 @@ module Crawler
 				length_for_exption =
 				@page.xpath("//table[@class='ajou_table'][2]
 					//td[contains(text(), \"#{set[i]}\")]").length
+
 				if length_for_exption == 0
-					retStr[i] = false# "식단이 등록되지 않았어요!"
+					# retStr[i] = "식단이 등록되지 않았어요!"
+					retHash[keys[i]] = "식단이 등록되지 않았어요!"
 					cnt -= 1
 				else
 					@page.css('table.ajou_table')[1].
 					css('td.no_right')[cnt + 1].		# 아침 점심 저녁 선택자
 					css('li').each do |li|
-						retStr[i] += "\n" if partition(li.text) && flag != 0
-						retStr[i] += "#{li.text}\n"
+						retHash[keys[i]] += "\n" if partition(li.text) && flag != 0
+						retHash[keys[i]] += "#{li.text}\n"
 						flag += 1
 					end
 				end
 
 				cnt += 1
-				# 아침, 점심, 저녁, 분식 중 하나라도 식단이 존재하면
-				# retStr[4]의 값을 true로 변경한다. 다시말해서,
-				# 모든 시간대의 식단이 없으면 retStr[4]의 값은 false이다.
-				# facultyFoodCourt() 메소드에서도 동일 알고리즘이 쓰인다.
-				retStr[4] = true if retStr[i]
-				retStr[i].chomp! if retStr[i]
+				retHash[keys[i]].chomp!
+
 			end
-			puts "retStr[4] : #{retStr[4]}"
-			return retStr
-
-						# retHash = {
-			# 	breakfast: '',
-			# 	lunch: '',
-			# 	dinner: '',
-			# 	snack: ''
-			# }
-			# retStr = ['', '', '', '']
-			# set = ['아침', '점심', '저녁', '분식']
-			# cnt = 0
-
-			# 4.times do |i|
-			# 	flag = 0
-			# 	# 식단이 등록되어 있지 않은 경우 예외처리 => 변수 cnt와 xpath 이용
-			# 	# xpath는 index가 1부터 시작한다.
-			# 	length_for_exption =
-			# 	@page.xpath("//table[@class='ajou_table'][2]
-			# 		//td[contains(text(), \"#{set[i]}\")]").length
-
-			# 	if length_for_exption == 0
-			# 		retStr[i] = "식단이 등록되지 않았어요!"
-			# 		cnt -= 1
-			# 	else
-			# 		@page.css('table.ajou_table')[1].
-			# 		css('td.no_right')[cnt + 1].		# 아침 점심 저녁 선택자
-			# 		css('li').each do |li|
-			# 			retStr[i] += "\n" if partition(li.text) && flag != 0
-			# 			retStr[i] += "#{li.text}\n"
-			# 			flag += 1
-			# 		end
-			# 	end
-
-			# 	cnt += 1
-			# 	retStr[i].chomp!
-			# end
-			# return retStr
+			return retHash
 		end
 
 		def facultyFoodCourt
@@ -241,9 +208,9 @@ module Crawler
 		end
 	end
 end
-# test = Crawler::SchoolFood.new()
+test = Crawler::SchoolFood.new()
 # puts test.studentFoodCourt
-# puts test.dormFoodCourt
+puts test.dormFoodCourt[:lunch]
 # puts test.facultyFoodCourt
 
 # test = Crawler::Notice.new('home')
