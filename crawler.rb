@@ -5,8 +5,10 @@ module Crawler
 	class SchoolFood
 		def initialize
 			url = 'http://www.ajou.ac.kr/kr/life/food.jsp'
-			html = fixHtml(open(url).read)
+
 			# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
+			html = fixHtml(open(url).read)
+
 			@page = Nokogiri::HTML(html)
 		end
 
@@ -14,10 +16,7 @@ module Crawler
 			html.gsub!(/<[가-힣]/) {|s| s = '&lt;' + s[1]}
 			html.gsub!(/[가-힣]>/) {|s| s = s[0] + '&gt;'}
 			return html
-			# 명시적으로 html을 반환해주지 않을 경우, html문서에
-			# 위 정규표현식에 부합하는 lexeme이 하나도 없는 경우
-			# 아무것도 반환하지 않는다. 그래서 html문서가 빈 채로
-			# 반환되는 문제점이 발생한다.
+
 		end
 
 		def partition(string)
@@ -44,7 +43,6 @@ module Crawler
 			retStr.chomp!
 
 			if retStr.empty?
-				puts "stu : false"
 				return false
 				# return "식단이 등록되지 않았어요!"
 			else
@@ -137,7 +135,7 @@ module Crawler
 				cnt += 1
 				retHash[:isOpen] = true if retHash[keys[i]]
 				retHash[keys[i]].chomp! if retHash[keys[i]]
-				
+
 			end
 
 			return retHash
