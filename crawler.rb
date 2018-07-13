@@ -58,7 +58,7 @@ module Crawler
 				lunch: '',
 				dinner: '',
 				snack: '',
-				flag: false
+				menuExist: false
 			}
 
 			keys = retHash.keys
@@ -95,7 +95,7 @@ module Crawler
 				# retStr[4]의 값을 true로 변경한다. 다시말해서,
 				# 모든 시간대의 식단이 없으면 retStr[4]의 값은 false이다.
 				# facultyFoodCourt() 메소드에서도 동일 알고리즘이 쓰인다.
-				retHash[keys[4]] = true if retHash[keys[i]]
+				retHash[:menuExist] = true if retHash[keys[i]]
 				retHash[keys[i]].chomp! if retHash[keys[i]]
 
 			end
@@ -103,6 +103,11 @@ module Crawler
 		end
 
 		def facultyFoodCourt
+			retHash = {
+				lunch: '',
+				dinner: '',
+				flag: false
+			}
 			retStr = ['', '', false]
 			set = ['점심', '저녁']
 			cnt = 0
