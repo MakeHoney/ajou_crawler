@@ -58,7 +58,7 @@ module Crawler
 				lunch: '',
 				dinner: '',
 				snack: '',
-				menuExist: false
+				isOpen: false
 			}
 
 			keys = retHash.keys
@@ -95,7 +95,7 @@ module Crawler
 				# retStr[4]의 값을 true로 변경한다. 다시말해서,
 				# 모든 시간대의 식단이 없으면 retStr[4]의 값은 false이다.
 				# facultyFoodCourt() 메소드에서도 동일 알고리즘이 쓰인다.
-				retHash[:menuExist] = true if retHash[keys[i]]
+				retHash[:isOpen] = true if retHash[keys[i]]
 				retHash[keys[i]].chomp! if retHash[keys[i]]
 
 			end
@@ -106,9 +106,11 @@ module Crawler
 			retHash = {
 				lunch: '',
 				dinner: '',
-				flag: false
+				isOpen: false
 			}
-			retStr = ['', '', false]
+
+			keys = retHash.keys
+
 			set = ['점심', '저녁']
 			cnt = 0
 
@@ -119,24 +121,26 @@ module Crawler
 					//td[contains(text(), \"#{set[i]}\")]").length
 
 				if length_for_exption == 0
-					retStr[i] = false # "식단이 등록되지 않았어요!"
+					retHash[keys[i]] = "식단이 등록되지 않았어요!"
 				else
-					retStr[i] += "※ <중식 - 5,000원>\n" if i == 0
-					retStr[i] += "※ <석식 - 5,000원>\n" unless i == 0
+					retHash[keys[i]] += "※ <중식 - 5,000원>\n" if i == 0
+					retHash[keys[i]] += "※ <석식 - 5,000원>\n" unless i == 0
 					@page.css('table.ajou_table')[2].
 					css('td.no_right')[cnt + 1].
 					css('li').each do |li|
-						retStr[i] += "#{li.text}\n"
+						retHash[keys[i]] += "#{li.text}\n"
 					end
-					retStr[i] += "\n*운영시간 : 11:00 ~ 14:00\n" if i == 0
-					retStr[i] += "\n*운영시간 : 17:00 ~ 19:00\n" unless i == 0
+					retHash[keys[i]] += "\n*운영시간 : 11:00 ~ 14:00\n" if i == 0
+					retHash[keys[i]] += "\n*운영시간 : 17:00 ~ 19:00\n" unless i == 0
 				end
+
 				cnt += 1
-				retStr[2] = true if retStr[i]
-				retStr[i].chomp! if retStr[i]
+				retHash[:isOpen] = true if retHash[keys[i]]
+				retHash[keys[i]].chomp! if retHash[keys[i]]
+				
 			end
-			puts retStr
-			return retStr
+
+			return retHash
 		end
 	end
 
@@ -223,8 +227,8 @@ module Crawler
 end
 test = Crawler::SchoolFood.new()
 # puts test.studentFoodCourt
-puts test.dormFoodCourt[:lunch]
-puts test.dormFoodCourt[:flag]
+puts test.facultyFoodCourt[:isOpen]
+# puts test.dormFoodCourt[:isOpen]
 # puts test.facultyFoodCourt
 
 # test = Crawler::Notice.new('home')
