@@ -2,7 +2,7 @@
 
 > Language : `Ruby`
 >
-> Dependency : `Nokogiri`, `open-uri`
+> Dependencies : `Nokogiri`, `open-uri`
 
 <br />
 
