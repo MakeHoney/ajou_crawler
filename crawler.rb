@@ -222,12 +222,32 @@ module Crawler
 			return retStr	# retStr이 empty일 때 예외처리하기
 		end
 	end
+	
+	class Transport
+		def initialize
+			url = 'http://m.gbis.go.kr/search/StationArrivalViaList.do?stationId=203000066&districtCd=2&mobileNo=4237&mobileNoSi=&regionName=%EC%88%98%EC%9B%90&stationName=%EC%95%84%EC%A3%BC%EB%8C%80.%EC%95%84%EC%A3%BC%EB%8C%80%ED%95%99%EA%B5%90%EB%B3%91%EC%9B%90&x=127.0439833&y=37.2786&search=%EC%95%84%EC%A3%BC%EB%8C%80%ED%95%99%EA%B5%90&osInfoType=M'
+
+			# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
+			html = open(url).read
+
+			@page = Nokogiri::HTML(html)
+
+		end
+
+		# def test
+		# 	return @page
+		# end
+	end
 end
-test = Crawler::SchoolFood.new()
+# test = Crawler::SchoolFood.new()
 # puts test.studentFoodCourt
-puts test.facultyFoodCourt[:isOpen]
+# puts test.facultyFoodCourt[:isOpen]
 # puts test.dormFoodCourt[:isOpen]
 # puts test.facultyFoodCourt
+
+# test = Crawler::Transport.new()
+# puts test.test
+
 
 # test = Crawler::Notice.new('home')
 # 시나리오
