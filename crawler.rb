@@ -64,7 +64,7 @@ module Crawler
 			set = ['아침', '점심', '저녁', '분식']
 			cnt = 0
 
-			4.times do |i|
+			set.length.times do |i|
 				flag = 0
 				# 식단이 등록되어 있지 않은 경우 예외처리 => 변수 cnt와 xpath 이용
 				# xpath는 index가 1부터 시작한다.
@@ -112,7 +112,7 @@ module Crawler
 			set = ['점심', '저녁']
 			cnt = 0
 
-			2.times do |i|
+			set.length.times do |i|
 
 				length_for_exption =
 				@page.xpath("//table[@class='ajou_table'][3]
@@ -204,7 +204,7 @@ module Crawler
 	class Vacancy
 		def initialize
 			@pages = []; @room = ['C1', 'D1']
-			2.times do |i|
+			@room.length.times do |i|
 				url = "http://u-campus.ajou.ac.kr/ltms/rmstatus/vew.rmstatus?bd_code=JL&rm_code=JL0#{@room[i]}"
 				html = open(url).read
 				@pages << Nokogiri::HTML(html)
@@ -212,7 +212,7 @@ module Crawler
 		end
 		def printVacancy
 			retStr = ['', '']
-			2.times do |i|	# C1, D1
+			retStr.length.times do |i|	# C1, D1
 				tmp = @pages[i].css('td[valign="middle"]')[1].text.split
 				retStr[i] += "◆ #{@room[i]} 열람실의 이용 현황\n"
 				retStr[i] += "  * 남은 자리 : #{tmp[6]}\n"
@@ -222,21 +222,22 @@ module Crawler
 			return retStr	# retStr이 empty일 때 예외처리하기
 		end
 	end
-	
+
 	class Transport
 		def initialize
-			url = 'http://m.gbis.go.kr/search/StationArrivalViaList.do?stationId=203000066&districtCd=2&mobileNo=4237&mobileNoSi=&regionName=%EC%88%98%EC%9B%90&stationName=%EC%95%84%EC%A3%BC%EB%8C%80.%EC%95%84%EC%A3%BC%EB%8C%80%ED%95%99%EA%B5%90%EB%B3%91%EC%9B%90&x=127.0439833&y=37.2786&search=%EC%95%84%EC%A3%BC%EB%8C%80%ED%95%99%EA%B5%90&osInfoType=M'
+			@pages = []; stationId = ['203000066']
 
-			# open(url)은 오브젝트명을 반환 open(url).read는 html문서 반환
+
+			url = "http://www.gbis.go.kr/gbis2014/openAPI.action?cmd=busarrivalservicestation&serviceKey=1234567890&stationId=#{stationId[i]}"
 			html = open(url).read
 
-			@page = Nokogiri::HTML(html)
+			@page = Nokogiri::XML(html)
 
 		end
 
-		# def test
-		# 	return @page
-		# end
+		def test
+			return @page
+		end
 	end
 end
 # test = Crawler::SchoolFood.new()
@@ -245,8 +246,8 @@ end
 # puts test.dormFoodCourt[:isOpen]
 # puts test.facultyFoodCourt
 
-# test = Crawler::Transport.new()
-# puts test.test
+test = Crawler::Transport.new()
+puts test.test
 
 
 # test = Crawler::Notice.new('home')
