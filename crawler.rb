@@ -1,6 +1,9 @@
 require 'open-uri'
 require 'nokogiri'
 
+# Hash prettifier
+require 'pp'
+
 module Crawler
 	class SchoolFood
 		def initialize
@@ -225,9 +228,9 @@ module Crawler
 
 	class Transport
 		@@stations = {
-			ajou_1:  {
+			entrance_1:  {
 				id: '203000066',
-				buses: {
+				busNum: {
 					'200000070' => '11-1',
 					'200000185' => '13-4',
 					'200000211' => '18',
@@ -269,28 +272,23 @@ module Crawler
 			end
 		end
 
-		def test
-			testPrint = []
+		def busesInfo(spotSymbol)
+			buses = {}
 
 			busInformations = {
-				number: [],		# 버스 번호
 				leftTime: [],	# 남은 시간
 				seats: []			# 남은 좌석
 			}
 
 			@pages[0].css('busArrivalList').each do |busDesc|
-				busInformations[:number] << @@stations[:ajou_1][:buses][busDesc.css('routeId').text]
-				busInformations[:leftTime] << busDesc.css('predictTime1').text
-				busInformations[:seats] << busDesc.css('remainSeatCnt1').text
-			end
-			# puts busInformations
-
-			busInformations[:number].length.times do |i|
-				testPrint << "#{busInformations[:number][i]}번 버스\n잔여시간: #{busInformations[:leftTime][i]}\n남은좌석: #{busInformations[:seats][i]}"
+				tmpKey = @@stations[spotSymbol][:busNum][busDesc.css('routeId').text]
+				buses[tmpKey] = Hash.new(busInformations)
+				buses[tmpKey][:leftTime] = busDesc.css('predictTime1').text
+				buses[tmpKey][:seats] = busDesc.css('remainSeatCnt1').text
 			end
 
-			puts testPrint
-			return busInformations
+			pp buses
+			return buses
 		end
 	end
 end
@@ -301,7 +299,7 @@ end
 # puts test.facultyFoodCourt
 
 test = Crawler::Transport.new()
-test.test
+test.busesInfo(:entrance_1)
 
 
 # test = Crawler::Notice.new('home')
