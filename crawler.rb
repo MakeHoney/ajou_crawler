@@ -224,19 +224,73 @@ module Crawler
 	end
 
 	class Transport
+		@@stations = {
+			ajou_1:  {
+				id: '203000066',
+				buses: {
+					'200000070' => '11-1',
+					'200000185' => '13-4',
+					'200000211' => '18',
+					'200000053' => '20',
+					'223000100' => '202',
+					'200000064' => '32',
+					'200000236' => '32-3',
+					'200000272' => '32-4',
+					'200000231' => '54',
+					'234000024' => '720-1',
+					'234000026' => '720-2',
+					'200000146' => '80',
+					'200000208' => '81',
+					'200000197' => '85',
+					'200000199' => '88-1',
+					'200000201' => '9-2',
+					'200000144' => '99',
+					'200000196' => '99-2',
+					'234000013' => '1007-1',
+					'200000110' => '3007',
+					'200000274' => '3008',
+					'204000056' => '4000',
+					'200000112' => '7000',
+					'200000119' => '7001',
+					'200000205' => '8800'
+				}
+			}
+		}
+
 		def initialize
-			@pages = []; stationId = ['203000066']
+			@pages = [];
 
-
-			url = "http://www.gbis.go.kr/gbis2014/openAPI.action?cmd=busarrivalservicestation&serviceKey=1234567890&stationId=#{stationId[i]}"
-			html = open(url).read
-
-			@page = Nokogiri::XML(html)
-
+			@@stations.each_with_index do |station, i|
+				# 인덱스 1부터 시작
+				puts station[i + 1][:id]
+				url = "http://www.gbis.go.kr/gbis2014/openAPI.action?cmd=busarrivalservicestation&serviceKey=1234567890&stationId=#{station[i + 1][:id]}"
+				html = open(url).read
+				@pages << Nokogiri::XML(html)
+			end
 		end
 
 		def test
-			return @page
+			testPrint = []
+
+			busInformations = {
+				number: [],		# 버스 번호
+				leftTime: [],	# 남은 시간
+				seats: []			# 남은 좌석
+			}
+
+			@pages[0].css('busArrivalList').each do |busDesc|
+				busInformations[:number] << @@stations[:ajou_1][:buses][busDesc.css('routeId').text]
+				busInformations[:leftTime] << busDesc.css('predictTime1').text
+				busInformations[:seats] << busDesc.css('remainSeatCnt1').text
+			end
+			# puts busInformations
+
+			busInformations[:number].length.times do |i|
+				testPrint << "#{busInformations[:number][i]}번 버스\n잔여시간: #{busInformations[:leftTime][i]}\n남은좌석: #{busInformations[:seats][i]}"
+			end
+
+			puts testPrint
+			return busInformations
 		end
 	end
 end
@@ -247,7 +301,7 @@ end
 # puts test.facultyFoodCourt
 
 test = Crawler::Transport.new()
-puts test.test
+test.test
 
 
 # test = Crawler::Notice.new('home')
