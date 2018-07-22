@@ -46,7 +46,6 @@ module Crawler
 
 			if retStr.empty?
 				return false
-				# return "식단이 등록되지 않았어요!"
 			else
 				return retStr
 			end
@@ -75,8 +74,7 @@ module Crawler
 					//td[contains(text(), \"#{set[i]}\")]").length
 
 				if length_for_exption == 0
-					# retStr[i] = "식단이 등록되지 않았어요!"
-					retHash[keys[i]] = "식단이 등록되지 않았어요!"
+					retHash[keys[i]] = false
 					cnt -= 1
 				else
 					@page.css('table.ajou_table')[1].
@@ -121,7 +119,7 @@ module Crawler
 					//td[contains(text(), \"#{set[i]}\")]").length
 
 				if length_for_exption == 0
-					retHash[keys[i]] = "식단이 등록되지 않았어요!"
+					retHash[keys[i]] = false
 				else
 					retHash[keys[i]] += "※ <중식 - 5,000원>\n" if i == 0
 					retHash[keys[i]] += "※ <석식 - 5,000원>\n" unless i == 0
@@ -305,9 +303,9 @@ end
 # puts test.facultyFoodCourt[:isOpen]
 # puts test.dormFoodCourt[:isOpen]
 # puts test.facultyFoodCourt
-
-test = Crawler::Transport.new()
-test.busesInfo(:entrance_1)
+#
+# test = Crawler::Transport.new()
+# puts test.busesInfo(:entrance_1)['720-1'][:leftTime]
 
 
 # test = Crawler::Notice.new('home')
