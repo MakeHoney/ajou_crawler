@@ -284,7 +284,7 @@ module Crawler
 				number: '', 				# 버스 번호
 				leftTime: '',				# 남은 시간
 				seats: '',					# 남은 좌석
-				isLowPlate: false,	# 저상 여부
+				isLowPlate: '',	# 저상 여부
 				vehicleNum: ''			# 차량 번호
 			}
 
@@ -295,7 +295,7 @@ module Crawler
 				buses[tmpKey][:number] = "* #{tmpKey}번 버스 *"
 				buses[tmpKey][:leftTime] = busDesc.css('predictTime1').text
 				buses[tmpKey][:seats] = busDesc.css('remainSeatCnt1').text
-				buses[tmpKey][:isLowPlate] = true if busDesc.css('lowPlate1').text.eql?('1')
+				buses[tmpKey][:isLowPlate] = busDesc.css('lowPlate1').text
 				buses[tmpKey][:vehicleNum] = busDesc.css('plateNo1').text
 			end
 
@@ -310,8 +310,8 @@ end
 # puts test.dormFoodCourt[:isOpen]
 # puts test.facultyFoodCourt
 #
-# test = Crawler::Transport.new()
-# pp test.busesInfo(:entrance_1)['3007']
+test = Crawler::Transport.new()
+pp test.busesInfo(:entrance_1)['3007'][:isLowPlate]
 
 
 # test = Crawler::Notice.new('home')
