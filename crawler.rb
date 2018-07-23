@@ -231,8 +231,17 @@ module Crawler
 			entrance_2: {
 				id: '202000005'
 			},
+			entrance_3: {
+				id: '202000039'
+			},
+			entrance_4: {
+				id: '202000061'
+			},
 			entrance_5: {
 				id: '202000042'
+			},
+			entrance_6: {
+				id: '202000041'
 			},
 			busNum: {
 				'200000070' => '11-1',
