@@ -294,7 +294,7 @@ module Crawler
 				number: '', 				# 버스 번호
 				leftTime: '',				# 남은 시간
 				seats: '',					# 남은 좌석
-				isLowPlate: '',	# 저상 여부
+				isLowPlate: '',			# 저상 여부
 				vehicleNum: ''			# 차량 번호
 			}
 
