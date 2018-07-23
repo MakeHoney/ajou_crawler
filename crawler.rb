@@ -225,23 +225,29 @@ module Crawler
 
 	class Transport
 		@@stations = {
-			entrance_1: { 			# 정문 (맥날)
+			entrance_1: { 						# 정문 (맥날)
 				id: '203000066',
+				name: '아주대 정문 (맥날)'
 			},
-			entrance_2: { 			# 정문 (KFC)
-				id: '202000005'
+			entrance_2: { 						# 정문 (KFC)
+				id: '202000005',
+				name: '아주대 정문 (KFC)'
 			},
-			entrance_3: { 			# 후문
-				id: '202000042'
+			entrance_3: { 						# 후문
+				id: '202000042',
+				name: '아주대 후문[0]'
 			},
-			entrance_4: { 			# 후문 건너편
-				id: '202000041'
+			entrance_4: { 						# 후문 건너편
+				id: '202000041',
+				name: '아주대 후문[1]'
 			},
-			highschool_1: { 		# 창현, 유신고1
-				id: '202000039'
+			highschool_1: { 					# 창현, 유신고1
+				id: '202000039',
+				name: '창현, 유신고[0]'
 			},
-			highschool_2: { 		# 창현, 유신고2
-				id: '202000061'
+			highschool_2: { 					# 창현, 유신고2
+				id: '202000061',
+				name: '창현, 유신고[1]'
 			},
 			busNum: {
 				'200000070' => '11-1',
