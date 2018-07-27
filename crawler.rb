@@ -292,7 +292,10 @@ module Crawler
 			@pages = {
 				entrance_1: '',
 				entrance_2: '',
-				entrance_5: ''
+				entrance_3: '',
+				entrance_4: '',
+				highschool_1: '',
+				highschool_2: ''
 			}
 
 			@@stations.each do |station, value|
